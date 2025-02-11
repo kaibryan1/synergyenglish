@@ -1,0 +1,14 @@
+.section--header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 10000;
+  padding: 28px 0px 0px 0px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(228, 228, 228, 0) 0%,
+    rgb(228, 228, 228, 80%) 200%
+  );
+  backdrop-filter: blur(8px);
+}

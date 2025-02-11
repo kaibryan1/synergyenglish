@@ -1,0 +1,117 @@
+@use "../../styles/index.scss" as index;
+
+.button {
+  width: max-content;
+  height: index.fluid-value(345px, 1440px, 40px, 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  color: var(--button-primary-text);
+  transition: all 0.6s ease-out;
+  cursor: pointer;
+
+  & p {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    color: var(--button-primary-text-hover);
+
+    .button__icon svg path {
+      stroke: var(--button-primary-text-hover) !important;
+    }
+  }
+
+  &.brand {
+    color: var(--button-brand-text);
+    transition: all 0.8s ease-out;
+
+    .button__icon svg path {
+      stroke: var(--button-brand-text) !important;
+    }
+
+    &.brand .button__text,
+    &.brand .button__icon {
+      background-color: var(--button-brand-background) !important;
+    }
+
+    .textShader,
+    .iconShader {
+      background-color: var(--button-brand-filler) !important;
+    }
+  }
+
+  &.brand:hover {
+    color: var(--button-brand-text-hover) !important;
+    // transition: color 0.3s ease-out;
+
+    .button__icon svg path {
+      stroke: var(--button-brand-text-hover) !important;
+      // transition: stroke 0.3s ease-out;
+    }
+
+    .button__text,
+    .button__icon {
+      border: 2px solid var(--button-brand-border);
+    }
+  }
+
+  & * span {
+    display: inline-block;
+  }
+
+  & * p {
+    width: max-content;
+  }
+
+  &__text {
+    padding-inline: index.fluid-value(345px, 1440px, 24px, 32px);
+  }
+
+  &__text,
+  &__icon {
+    width: auto !important;
+    border-radius: 1000px;
+    border: 2px solid var(--button-primary-border);
+    height: 100%;
+    @include index.flex-center; //center elements in the middle with fx box
+    overflow: hidden;
+    background-color: var(--button-primary-background);
+    transition: border 0.4s ease-out;
+    box-shadow: var(--shadow-small);
+  }
+
+  .textShader,
+  .iconShader {
+    position: absolute;
+    z-index: 1;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--button-primary-filler);
+    border-radius: 1000px;
+    transform: scale(1.1);
+  }
+
+  &__label {
+    position: relative;
+    z-index: 3;
+    white-space: noWrap;
+  }
+
+  &__icon {
+    padding-inline: 20px;
+
+    & svg {
+      position: relative;
+      z-index: 3;
+    }
+
+    & svg path {
+      stroke: var(--button-primary-text) !important;
+      transition: all 0.8s ease-out;
+    }
+  }
+}

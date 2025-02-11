@@ -1,0 +1,80 @@
+@use "../../../styles/index.scss" as index;
+
+.card {
+  position: relative;
+  border: 2px solid var(--color-dark);
+  padding: index.fluid-value(435px, 1440px, 24px, 40px);
+  width: max-content;
+  border-radius: index.fluid-value(435px, 1440px, 24px, 35px);
+  box-shadow: var(--shadow-medium);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+  & * {
+    z-index: 1;
+  }
+
+  & p {
+    width: 33ch;
+    margin-bottom: 32px;
+  }
+}
+
+.parentDetails {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile {
+  border: 1px solid var(--color-dark);
+  width: index.fluid-value(435px, 1440px, 40px, 50px);
+  height: index.fluid-value(435px, 1440px, 40px, 50px);
+  box-shadow: var(--shadow-small);
+  border-radius: 1000px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center !important;
+  position: relative;
+
+  & .initial {
+    width: max-content;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  & img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border: 1000px;
+  }
+}
+
+.name {
+  margin: 0;
+}
+
+.illustrationWraper {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: index.fluid-value(435px, 1440px, 60px, 110px);
+  border-bottom-right-radius: index.fluid-value(435px, 1440px, 24px, 35px);
+  z-index: 0;
+
+  @include index.below(450px) {
+    max-width: 120px;
+  }
+}
+
+.illustration {
+  position: relative;
+  top: index.fluid-value(435px, 1440px, 0px, 20px);
+  left: index.fluid-value(435px, 1440px, 0px, 20px);
+  rotate: -6deg;
+}

@@ -1,0 +1,53 @@
+@use "../../../styles/index.scss" as index;
+
+.section--feedback {
+  padding-top: 80px;
+  padding-bottom: 0px;
+
+  @include index.below(435px) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+
+.banner {
+  background-color: var(--color-white);
+  padding-top: 0;
+  overflow: hidden;
+
+  .cardsWrapper {
+    max-height: 100vh;
+    rotate: -3deg;
+    transform: translateY(-40px);
+
+    @include index.below(450px) {
+      transform: translateY(-16px);
+    }
+  }
+}
+
+.textWrapper {
+  @include index.title-textWrapper;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.row0 {
+  transform: translateX(-80px);
+}
+
+.row1 {
+  transform: translateX(-25%);
+
+  @include index.below(450px) {
+    transform: translateX(-6%);
+  }
+}
+
+.row2 {
+  transform: translateX(-160px);
+}

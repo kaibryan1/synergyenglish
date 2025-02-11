@@ -1,0 +1,128 @@
+@use "../../../styles/index.scss" as index;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 80vh;
+}
+
+.courseModal {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  height: 100%;
+
+  @include index.below(500px) {
+    padding: 40px 20px;
+  }
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+
+  & h3 {
+    width: 85%;
+  }
+}
+
+.closeIcon {
+  @include index.flex-center;
+  width: index.fluid-value(450px, 1440px, 32px, 48px);
+  height: index.fluid-value(450px, 1440px, 32px, 48px);
+  background-color: var(--color-cotton);
+  border-radius: 1000px;
+  transition: all 0.25s ease-out;
+
+  &:hover {
+    background-color: var(--color-dark);
+
+    & svg path {
+      transition: stroke 0.25s ease-out;
+    }
+
+    & svg path {
+      stroke: var(--color-white);
+    }
+  }
+}
+
+.modalBody {
+}
+
+.description {
+  margin-bottom: 32px;
+  max-width: 65ch;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 24px;
+  margin-bottom: 40px;
+}
+
+.block {
+  width: 45%;
+  display: flex;
+  gap: 8px;
+
+  &__icon {
+    height: max-content;
+
+    & img {
+      min-width: 24px !important;
+      height: 24px !important;
+    }
+  }
+}
+
+.block__body {
+  & h5 {
+    margin-bottom: 16px;
+  }
+}
+
+.ctaWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  @include index.below(500px) {
+    flex-direction: column-reverse;
+    gap: 24px;
+  }
+
+  & a {
+    margin-right: 32px;
+  }
+
+  .socialIcons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    & svg path {
+      fill: var(--color-dark);
+    }
+  }
+}
+
+.banner {
+  width: 100%;
+  min-height: 22% !important;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

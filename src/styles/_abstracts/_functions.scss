@@ -1,0 +1,29 @@
+@use "sass:math";
+
+@function strip-units($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+
+// Fallback for browsers without `calc()` support =>  padding: clamp( 80px, 140px, 160px );
+// Usage => width: styles.fluid-value(435px, 1440px, 80px, 160px);
+
+// Fluid Width Function
+@function fluid-value($min-vw, $max-vw, $min-value, $max-value) {
+  // Ensure all units are consistent
+  $u1: math.unit($min-vw);
+  $u2: math.unit($max-vw);
+  $u3: math.unit($min-value);
+  $u4: math.unit($max-value);
+
+  // Check if units are the same
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    // Return the calc expression as a string
+    @return calc(
+      #{$min-value} + #{strip-units($max-value - $min-value)} *
+        ((100vw - #{$min-vw}) / #{strip-units($max-vw - $min-vw)})
+    );
+  }
+
+  // Return a fallback if the units are not consistent
+  @error "Units for $min-vw, $max-vw, $min-value, and $max-value must be the same.";
+}

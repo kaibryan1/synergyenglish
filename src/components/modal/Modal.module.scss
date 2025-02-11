@@ -1,0 +1,32 @@
+@use "../../styles/index.scss" as index;
+
+.modalWrapper {
+  position: fixed;
+  inset: 0; // Covers the entire screen
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5); // Semi-transparent background
+  z-index: 10000;
+
+  .content {
+    position: absolute;
+    top: 0.8vh;
+    right: 0.8vh;
+    width: 60vw;
+    height: 98.4vh;
+    background-color: var(--color-white);
+    border-radius: 12px;
+    overflow: hidden;
+
+    @include index.below(900px) {
+      width: 100vw;
+      height: auto;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      border-radius: 24px 24px 0px 0px;
+      // padding: 40px 20px;
+    }
+  }
+}

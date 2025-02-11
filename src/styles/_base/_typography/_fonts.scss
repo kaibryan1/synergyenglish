@@ -1,0 +1,71 @@
+@use "../../_abstracts/mixins" as mixins;
+@use "../_typography/type-scale" as type;
+
+// Heading Font
+@font-face {
+  font-family: "Pally";
+  src: url("/assets/fonts/Pally-Variable.woff2") format("woff2");
+  font-style: normal;
+  // font-weight: 400;
+}
+
+// Body font
+@font-face {
+  font-family: "Manrope";
+  src: url("/assets/fonts/Manrope-Variable.ttf") format("ttf");
+  font-style: normal;
+  // font-weight: 400;
+}
+
+// Myanmar Font
+@font-face {
+  font-family: "Z01-Umoe002";
+  src: url("/assets/fonts/Z01-Umoe.ttf") format("ttf");
+  font-style: normal;
+  // font-weight: 400;
+}
+
+html {
+  font-size: calc(100vw / var(--desktop-width) * 10);
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  // font-weight: medium;
+  font-size: clamp(14px, 1.4rem, 1.4rem);
+  @include type.fluid-type(435px, 1440px, 15px, 17px);
+  line-height: 140%;
+  letter-spacing: -0.2px;
+  text-size-adjust: 100%;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include mixins.below(450px) {
+    @include type.fluid-type(435px, 1440px, 13px, 15px);
+    letter-spacing: normal;
+  }
+
+  > * {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+h1,
+h2 {
+  letter-spacing: -2.2px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // font-family: "Pally", sans-serif;
+  font-family: "Pally", sans-serif;
+  font-weight: 600;
+}

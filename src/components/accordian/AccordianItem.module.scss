@@ -1,0 +1,41 @@
+@use "../../styles/index.scss" as index;
+
+:root {
+  --accordian-header: 0px;
+}
+
+.accordian {
+  &__item {
+    width: 100%;
+    background-color: var(--color-background--light);
+    padding: 20px 28px 28px 28px;
+    border-radius: index.fluid-value(435px, 1440px, 16px, 32px);
+    border: 2px solid var(--color-dark);
+    cursor: pointer;
+    box-shadow: var(--shadow-medium);
+    @include index.below(435px) {
+      padding: 22px 18px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--accordian-header);
+
+    h4 {
+      margin-bottom: 0;
+      opacity: 1 !important;
+    }
+  }
+
+  &__navBtn {
+    margin-top: 2px;
+    height: max-content;
+  }
+
+  &__body {
+    overflow: hidden;
+    text-align: left;
+  }
+}

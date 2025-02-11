@@ -1,0 +1,157 @@
+@use "../../../styles/index.scss" as index;
+
+.section__hero {
+  max-width: 100vw;
+  padding-top: 0px;
+  overflow: hidden;
+}
+
+.imagesWrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero {
+  overflow: hidden;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__textWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  & h1 {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    margin-bottom: 64px;
+
+    @include index.above(700px) {
+      width: 60%;
+    }
+
+    @include index.below(700px) {
+      max-width: 100vw !important;
+      width: 100% !important;
+    }
+  }
+}
+
+.content {
+  display: inline-block;
+  position: relative;
+}
+
+.heroIcon {
+  position: absolute;
+  height: 0.8em !important;
+  width: auto;
+  vertical-align: middle;
+}
+
+.flowerIcon {
+  top: -0.3em;
+  left: -5%;
+  rotate: -24deg;
+}
+
+.starIcon {
+  bottom: -0.3em;
+  left: -0.5em;
+  rotate: 8deg;
+}
+
+.pastleIcon {
+  top: -0.2em;
+  right: -0.3em;
+}
+
+.emote {
+  width: max-content;
+  height: index.fluid-value(435px, 1440px, 90px, 110px);
+}
+
+// Orange
+.emote:nth-of-type(1) {
+  position: absolute;
+  bottom: 7vh;
+  left: 12vw;
+  scale: 1.2;
+
+  @include index.below(500px) {
+    bottom: 12vh;
+    left: 15vw;
+  }
+}
+
+.emote:nth-of-type(2) {
+  position: absolute;
+  top: 20vh;
+  right: index.fluid-value(435px, 1440px, 0px, 110px);
+
+  @include index.below(500px) {
+    top: 14vh;
+    right: -2vh;
+  }
+}
+
+.kidImage {
+  position: absolute;
+  height: index.fluid-value(435px, 1440px, 130px, 190px);
+  top: 20vh;
+  left: 8vh;
+
+  @include index.below(900px) {
+    top: 13vh;
+    left: 5vh;
+  }
+
+  @include index.below(500px) {
+    top: 17vh;
+    left: 2vh;
+  }
+}
+
+// Underline Line
+.underline {
+  position: absolute;
+  bottom: -0.2em;
+  z-index: 1;
+  rotate: 5deg;
+
+  @include index.below(800px) {
+    bottom: -0.4em;
+    width: 100px;
+  }
+}
+
+[data="zIndex"] {
+  position: relative;
+  z-index: 2;
+}
+
+// Secondary
+.first.squiggly {
+  position: absolute;
+  bottom: 13vh;
+  right: 6vw;
+}
+
+.second.squiggly {
+  position: absolute;
+  bottom: 0vh;
+  left: 45vw;
+  rotate: 35deg;
+  scale: 0.6;
+  filter: blur(5px);
+  opacity: 0.8;
+}

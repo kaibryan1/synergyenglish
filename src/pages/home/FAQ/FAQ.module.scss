@@ -1,0 +1,156 @@
+@use "../../../styles/index.scss" as index;
+
+.section--faq {
+  position: relative;
+  overflow: hidden;
+  // padding-top: 80px;
+
+  @include index.below(800px) {
+    padding-bottom: 300px;
+  }
+}
+
+.faqWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.accordian {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: index.fluid-value(435px, 1440px, 400px, 700px);
+  margin-inline: auto;
+
+  & h2 {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+  }
+}
+
+.faqImages {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  border: 2px solid0red;
+  margin-left: 40px;
+}
+
+// Illustrations start here
+.emote {
+  z-index: 2;
+  width: index.fluid-value(435px, 1440px, 180px, 200px);
+}
+
+.pill {
+  z-index: 2;
+}
+
+#pillSynergy {
+  position: absolute;
+  top: 17%;
+  left: 2%;
+
+  @include index.below(500px) {
+    top: auto;
+    bottom: 10% !important;
+    left: -16vw;
+    scale: 0.7;
+  }
+}
+
+#pillFun {
+  position: absolute;
+  top: 42%;
+  right: 4%;
+
+  @include index.below(500px) {
+    top: auto;
+    bottom: 0vh !important;
+    left: 2%;
+    scale: 0.7;
+  }
+}
+
+#pillEnglish {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+
+  @include index.below(500px) {
+    top: auto;
+    bottom: 19vh !important;
+    right: -10vw;
+    scale: 0.7;
+  }
+}
+
+#emotePop {
+  position: absolute;
+  bottom: 0%;
+  left: -2%;
+  scale: 1;
+  height: index.fluid-value(435px, 1440px, 118px, 160px);
+  height: index.fluid-value(435px, 1440px, 118px, 160px);
+
+  @include index.below(500px) {
+    top: auto;
+    bottom: -4vh !important;
+    left: -14%;
+  }
+}
+
+#emoteFlower {
+  position: absolute;
+  bottom: -5%;
+  right: 10%;
+  height: index.fluid-value(435px, 1440px, 125px, 170px);
+  height: index.fluid-value(435px, 1440px, 125px, 170px);
+
+  @include index.below(500px) {
+    top: auto;
+    bottom: -8vh !important;
+    right: 30%;
+  }
+}
+
+#emoteCloud {
+  position: absolute;
+  top: 14%;
+  right: 5vw;
+  height: index.fluid-value(435px, 1440px, 125px, 170px);
+  height: index.fluid-value(435px, 1440px, 125px, 170px);
+
+  @include index.below(500px) {
+    top: auto;
+    bottom: 4vh !important;
+    right: 0vw;
+    scale: 0.8;
+  }
+}
+
+#secondaryMiddleCloud {
+  position: absolute;
+  bottom: 20%;
+  right: 0%;
+
+  & path {
+    fill: var(--color-cloud);
+  }
+}
+
+#backdrop {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  scale: 1.1;
+  clip-path: polygon(0 54%, 100% 85%, 100% 100%, 0% 100%);
+}

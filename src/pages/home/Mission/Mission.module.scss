@@ -1,0 +1,156 @@
+@use "../../../styles/index.scss" as index;
+
+// Pinned Section
+.section__mission {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  // border: 10px solid black;
+  overflow: hidden;
+}
+
+.section__shader {
+  position: absolute;
+  z-index: 9;
+  bottom: -95%;
+  left: 0;
+  width: 150vw;
+  height: 100vh;
+  background-color: var(--color-brand);
+  transform: rotate(-7deg);
+  // box-shadow: rgba(17, 12, 46, 0.09) 0px 48px 100px 0px;
+}
+
+.firstSection,
+.secondSection {
+  @include index.center-align;
+  // opacity: 0; /* Start hidden */
+  pointer-events: none; /* Prevent interaction until visible */
+}
+
+.textWrapper {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 32px;
+  text-align: center;
+  @include index.center-align;
+  @include index.title-textWrapper;
+  max-width: 70ch !important;
+}
+
+.firstSection {
+  width: 100vw;
+  height: 100vh;
+  z-index: 7;
+  background-color: var(--color-light);
+}
+
+.secondSection {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-brand);
+  color: var(--color-white) !important;
+  opacity: 1;
+  z-index: 8;
+  clip-path: polygon(0 100%, 100% 98%, 100% 100%, 0 100%);
+  will-change: clip-path;
+
+  @include index.below(435px) {
+    clip-path: polygon(0 100%, 100% 96%, 100% 100%, 0% 100%);
+  }
+}
+
+.topRow {
+  top: index.fluid-value(345px, 1440px, 72px, 92px);
+}
+
+.botRow {
+  bottom: index.fluid-value(345px, 1440px, 152px, 0px);
+}
+
+.asset {
+  object-fit: contain;
+  // width: clamp(110px, 180px, 300px); //fallback
+  width: index.fluid-value(345px, 1440px, 130px, 220px);
+  // height: clamp(110px, 180px, 300px);
+  height: index.fluid-value(345px, 1440px, 130px, 220px);
+}
+
+.stickyStar {
+  width: index.fluid-value(345px, 1440px, 120px, 180px);
+  position: absolute !important;
+  transform-origin: center center;
+  bottom: 0%;
+  left: 22%;
+  z-index: 1000;
+
+  @include index.below(800px) {
+    left: 10%;
+    bottom: 0%;
+    width: auto;
+    height: 72px;
+  }
+}
+
+.kidIconOrange {
+  width: index.fluid-value(345px, 1440px, 140px, 240px);
+  height: index.fluid-value(345px, 1440px, 140px, 240px);
+}
+
+.tiltedSquare {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--color-cloud);
+  transform: rotate(45deg);
+  transform-origin: top left;
+  width: index.fluid-value(345px, 1440px, 120px, 150px);
+  height: index.fluid-value(345px, 1440px, 120px, 150px);
+  z-index: 100;
+  box-shadow: rgba(30, 30, 31, 0.118) 0px 48px 100px 0px;
+
+  @include index.below(435px) {
+    margin-left: auto;
+    top: -5%;
+    right: -15%;
+  }
+}
+
+.flower {
+  position: absolute;
+  bottom: 8%;
+  right: 8%;
+  width: index.fluid-value(345px, 1440px, 140px, 200px);
+  height: index.fluid-value(345px, 1440px, 140px, 200px);
+  z-index: 100;
+
+  @include index.below(435px) {
+    bottom: 14%;
+    right: 2%;
+  }
+}
+
+.squigglyX {
+  position: absolute !important;
+  z-index: 100;
+  // transform-origin: center center;
+  top: 65%;
+  left: -6%;
+
+  & path {
+    stroke: var(--color-blue);
+  }
+
+  @include index.below(435px) {
+    top: 40%;
+    left: -12%;
+    scale: 0.9;
+  }
+}
+
+// ******* SECOND SECTION ELEMENTS ********
+.second.textWrapper {
+  position: absolute;
+  color: var(--color-white);
+  z-index: 100 !important;
+}

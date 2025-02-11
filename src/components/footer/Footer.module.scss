@@ -1,0 +1,154 @@
+@use "../../styles/index.scss" as index;
+
+.section--footer {
+  color: var(--color-white);
+  padding-bottom: 0px;
+
+  & img {
+    width: 100vw;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 64px;
+  flex-wrap: wrap;
+
+  @include index.below(700px) {
+    justify-content: center;
+    text-align: center;
+
+    & .actions {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: end;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 12px;
+
+  & svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px 16px;
+  margin-bottom: 64px;
+
+  & .col {
+    width: 25%;
+  }
+
+  @include index.below(700px) {
+    & .col:first-child {
+      width: 100% !important;
+    }
+
+    & .col {
+      width: 45%;
+    }
+  }
+}
+
+.navTitle {
+  margin-bottom: 32px;
+  position: relative;
+  // opacity: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -14px;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    background-color: var(--color-white);
+    transform-origin: center left;
+    transform: scaleX(1);
+  }
+}
+
+.navWrapper {
+  margin-left: 0;
+  list-style: none;
+
+  & li {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: var(--color-brand);
+      transition: color 0.6s ease-out;
+    }
+  }
+}
+
+.brandIcons,
+.navSocials {
+  width: 24px !important;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.navSocials {
+  width: 22px !important;
+  height: 22px;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--color-white);
+  padding: 40px 0px;
+
+  @include index.below(450px) {
+    padding: 8px 0px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+}
+
+.row:nth-child(1) {
+  transform: translateX(-15vw);
+
+  @include index.below(450px) {
+    // transform: translateX(-62%) !important;
+  }
+}
+
+.row:nth-child(2) {
+  transform: translateX(-2vw);
+
+  @include index.below(450px) {
+    // transform: translateX(-24%) !important;
+  }
+}
+
+.row:nth-child(3) {
+  transform: translateX(-6vw);
+
+  @include index.below(450px) {
+    // transform: translateX(-40%) !important;
+  }
+}

@@ -1,0 +1,36 @@
+@use "../../styles/index.scss" as index;
+
+.navwrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: index.fluid-value(450px, 1440px, 64px, 72px);
+  border-radius: 20px;
+  background-color: var(--color-white);
+  width: 100%;
+  border: 2px solid var(--color-dark);
+  box-shadow: var(--shadow-small);
+  padding-inline: 24px;
+}
+
+.logo {
+  @include index.below(500px) {
+    height: 40px;
+  }
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  padding-inline: 24px;
+  height: 100%;
+  text-align: center;
+
+  @include index.below(950px) {
+    display: none;
+  }
+}
+
+.buttonWrapper {
+  scale: 0.9;
+}

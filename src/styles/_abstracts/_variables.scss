@@ -1,0 +1,63 @@
+@use "../_abstracts/functions" as functions;
+
+:root {
+  --font-primary: "Pally-Variable", sans-serif;
+
+  --color-light: #f9f9fa;
+  --color-dark: #120e0d;
+  --color-white: #ffffff;
+
+  // Primary
+  --color-brand: #ff6835;
+  --color-blue: #6692fd;
+  --color-purple: #c383d9;
+  --color-yellow: #ffc33f;
+  --color-green: #69b06c;
+  --color-magenta: #ff43b1;
+
+  // Secondary
+  --color-cloud: #d9e2f4;
+  --color-beige: #f6efe4;
+  --color-taro: #efd9f9;
+  --color-cotton: #f5f6f7;
+
+  // Texts
+  --color-text-light: var(--color-light);
+  --color-text-dark: var(--color-dark);
+  --color-text-white: var(--color-white);
+
+  // Backgrounds
+  --color-background--white: var(--color-white);
+  --color-background--light: var(--color-light);
+  --color-background--brand: var(--color-brand);
+  --color-background--dark: var(--color-dark);
+
+  // Border
+  --color-border--dark: var(--color-dark);
+
+  // Buttons
+  --button-primary-background: var(--color-background--white);
+  --button-primary-text: var(--color-text-dark);
+  --button-primary-text-hover: var(--color-text-white);
+  --button-primary-border: var(--color-border--dark);
+  // --button-primary-filler: var(--color-background--brand); //brand bg on hover
+  --button-primary-filler: var(--color-brand); //brand bg on hover
+
+  --button-brand-background: var(--color-background--brand);
+  --button-brand-text: var(--color-text-white);
+  --button-brand-text-hover: var(--color-text-dark);
+  --button-brand-border: var(--color-border--dark);
+  // --button-brand-filler: var(--color-background--white); //white bg on hover
+  --button-brand-filler: var(--color-white); //white bg on hover
+
+  // Padding
+  // --button-padding-X: functions.fluid-value(345px, 1440px, 24px, 32px);
+  // --button-padding-Y: functions.fluid-value(345px, 1440px, 13px, 16px);
+
+  // Box Shadow
+  --shadow-small: 2px 3px 0px 0px #000000;
+  --shadow-medium: 3px 4px 0px 0px #000000;
+
+  --desktop-width: 1440;
+  --mobile-width: 440;
+}

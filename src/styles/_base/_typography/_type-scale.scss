@@ -1,0 +1,195 @@
+@use "../../_abstracts/mixins" as mixins;
+@use "sass:math";
+
+@function strip-unit($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+
+// Fluid Width
+@mixin fluid-width($min-vw, $max-vw, $min-width, $max-width) {
+  $u1: math.unit($min-vw);
+  $u2: math.unit($max-vw);
+  $u3: math.unit($min-width);
+  $u4: math.unit($max-width);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      width: $min-width;
+      @media screen and (min-width: $min-vw) {
+        width: calc(
+          #{$min-width} + #{strip-unit($max-width - $min-width)} *
+            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+        );
+      }
+      @media screen and (min-width: $max-vw) {
+        width: $max-width;
+      }
+    }
+  }
+}
+
+// Using fluid-type => @include fluid-type(390px, 1440px, 32px(min), 48px(max));
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: math.unit($min-vw);
+  $u2: math.unit($max-vw);
+  $u3: math.unit($min-font-size);
+  $u4: math.unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+        );
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+// Fluid Width
+@mixin fluid-width($min-vw, $max-vw, $min-width, $max-width) {
+  $u1: math.unit($min-vw);
+  $u2: math.unit($max-vw);
+  $u3: math.unit($min-width);
+  $u4: math.unit($max-width);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      width: $min-width;
+      @media screen and (min-width: $min-vw) {
+        width: calc(
+          #{$min-width} + #{strip-unit($max-width - $min-width)} *
+            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+        );
+      }
+      @media screen and (min-width: $max-vw) {
+        width: $max-width;
+      }
+    }
+  }
+}
+
+.h1_decorative {
+  @include fluid-type(435px, 1440px, 120px, 150px);
+  letter-spacing: -2%;
+  margin-bottom: 64px;
+  line-height: 115%;
+
+  @include mixins.below(450px) {
+    @include fluid-type(435px, 1440px, 80px, 100px);
+    letter-spacing: -2%;
+  }
+}
+
+h1,
+.h1 {
+  @include fluid-type(435px, 1440px, 50px, 80px);
+  letter-spacing: -0.6%;
+  margin-bottom: 64px;
+  line-height: 110%;
+
+  @include mixins.below(450px) {
+    // @include fluid-type(435px, 1440px, 34px, 48px);
+    line-height: 115%;
+    margin-bottom: 48px;
+  }
+}
+
+h2,
+.h2 {
+  @include fluid-type(435px, 1440px, 54px, 64px);
+  letter-spacing: 0%;
+  margin-bottom: 32px;
+  line-height: 110%;
+
+  @include mixins.below(450px) {
+    @include fluid-type(435px, 1440px, 34px, 42px);
+    line-height: 115%;
+    margin-bottom: 20px;
+  }
+}
+
+h3,
+.h3 {
+  @include fluid-type(435px, 1440px, 40px, 48px);
+  letter-spacing: 0%;
+  margin-bottom: 24px;
+  line-height: 115%;
+
+  @include mixins.below(450px) {
+    @include fluid-type(435px, 1440px, 30px, 36px);
+    line-height: 115%;
+    margin-bottom: 20px;
+  }
+}
+
+h4,
+.h4 {
+  @include fluid-type(435px, 1440px, 28px, 36px);
+  letter-spacing: 0%;
+  margin-bottom: 20px;
+  line-height: 115%;
+
+  @include mixins.below(450px) {
+    @include fluid-type(435px, 1440px, 22px, 28px);
+    line-height: 115%;
+    // margin-bottom: 20px;
+  }
+}
+
+// h5,
+// .h5 {
+//   @include type.fluid-type(430px, 1440px, 11px, 16px);
+//   // font-weight: 600;
+//   letter-spacing: -0.05rem;
+//   line-height: 1.2;
+//   //   margin-bottom: 40px;
+// }
+
+.navigation {
+  @include fluid-type(430px, 1440px, 15px, 18px);
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0rem;
+  line-height: 115%;
+  text-transform: uppercase;
+
+  @include mixins.below(450px) {
+    @include fluid-type(435px, 1440px, 13px, 15px);
+    line-height: 115%;
+  }
+}
+
+.title {
+  @include fluid-type(430px, 1440px, 15px, 18px);
+  letter-spacing: 0rem;
+  font-weight: 700;
+  line-height: 125%;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 24px;
+  @include mixins.below(450px) {
+    @include fluid-type(435px, 1440px, 13px, 15px);
+    line-height: 125%;
+    margin-bottom: 24px;
+  }
+}
+
+.body_big {
+  @include fluid-type(435px, 1440px, 19px, 22px);
+  line-height: 135%;
+  letter-spacing: -0.06rem;
+
+  @include mixins.below(450px) {
+    font-size: 17px;
+  }
+}
+
+.lan {
+  font-family: "Z01-Umoe002", sans-serif !important;
+}

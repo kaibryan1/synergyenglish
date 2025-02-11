@@ -1,0 +1,60 @@
+:root {
+  --testimonial--spacer--height: 38vh;
+  --width: 0vw;
+}
+
+// Animation for text reveal
+[data-animation="text-reveal"] {
+  span {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+  }
+
+  div div {
+    transform: translateY(150%);
+    will-change: transform;
+  }
+}
+
+[data-animation="image-slide"] {
+  overflow: hidden;
+}
+
+// [data-animation="image-slide"] {
+//   border: 2px solid red;
+//   width: 10px !important;
+//   div {
+//     display: inline-block;
+//     overflow: hidden;
+//   }
+
+//   div img {
+//     // width: 110px;
+//     height: 80px;
+//     will-change: transform;
+//   }
+// }
+
+// img[data-src] {
+//   opacity: 0;
+// }
+
+// Animation for parallex image
+img {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-animation="parallex-image"] {
+  overflow: hidden;
+
+  img {
+    height: 125% !important;
+  }
+}

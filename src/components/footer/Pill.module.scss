@@ -1,0 +1,28 @@
+@use "../../styles/index.scss" as index;
+
+.pill {
+  position: relative;
+  min-width: index.fluid-value(435px, 1440px, 160px, 320px);
+  height: index.fluid-value(435px, 1440px, 56px, 120px);
+  max-width: 350px;
+  width: max-content;
+  border-radius: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  // @include index.below(500px) {
+  //   min-width: index.fluid-value(435px, 1440px, 120px, 320px);
+  // }
+
+  & h1 {
+    color: var(--color-dark);
+    margin: 0;
+  }
+
+  & img {
+    width: auto;
+    height: 100%;
+  }
+}
