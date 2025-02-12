@@ -1,5 +1,6 @@
 import styles from "./Footer.module.scss";
 
+// Component
 import Pill from "./Pill";
 import { FOOTER_DATA } from "../../data/FOOTER";
 

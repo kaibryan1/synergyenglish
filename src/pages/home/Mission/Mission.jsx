@@ -193,95 +193,6 @@ export default function Mission() {
               </clipPath>
             </defs>
           </svg>
-
-          {/* <svg
-            className={styles.stickyStar}
-            width="167"
-            height="167"
-            viewBox="0 0 167 167"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              ref={purpleEmoteRef}
-              d="M166.7 98.7995H120.5L153.18 131.48L131.6 153.05L98.9299 120.38V166.57H68.4299V120.37L35.7499 153.05L14.1799 131.48L46.8599 98.7995H0.649902V68.2895H46.8499L14.1899 35.6295L35.7599 14.0595L68.4299 46.7295V0.519531H98.9299V46.7295L131.6 14.0595L153.17 35.6295L120.51 68.2895H166.7V98.7995Z"
-              fill="#C383D9"
-            />
-            <path
-              ref={purpleEmoteLeft}
-              d="M121.921 82.5793L110.67 94.0149V110.188H94.7434L83.4823 121.614L72.2213 110.188H56.2949V94.0149L45.0439 82.5793L56.2949 71.1436V54.9704H72.2213L83.4823 43.5449L94.7434 54.9704H110.67V71.1436L121.921 82.5793Z"
-              fill="#EFD9F9"
-            />
-            <mask
-              id="mask0_122_693"
-              maskUnits="userSpaceOnUse"
-              x="65"
-              y="67"
-              width="16"
-              height="21"
-            >
-              <ellipse
-                cx="72.7979"
-                cy="77.2447"
-                rx="7.76566"
-                ry="9.78473"
-                fill="white"
-              />
-            </mask>
-            <g mask="url(#mask0_122_693)">
-              <rect
-                x="60.5273"
-                y="66.9043"
-                width="24.6241"
-                height="20.6187"
-                fill="white"
-              />
-              <rect
-                x="65.5698"
-                y="69.8848"
-                width="8.45645"
-                height="10.7166"
-                rx="4.22822"
-                fill="black"
-              />
-            </g>
-            <mask
-              id="mask1_122_693"
-              maskUnits="userSpaceOnUse"
-              x="86"
-              y="67"
-              width="17"
-              height="21"
-            >
-              <ellipse
-                cx="94.3233"
-                cy="77.2447"
-                rx="7.76566"
-                ry="9.78473"
-                fill="white"
-              />
-            </mask>
-            <g mask="url(#mask1_122_693)">
-              <rect
-                x="82.0527"
-                y="66.9043"
-                width="24.6241"
-                height="20.6187"
-                fill="white"
-              />
-              <path
-                d="M87.0952 74.113C87.0952 71.7778 88.9883 69.8848 91.3234 69.8848V69.8848C93.6586 69.8848 95.5517 71.7778 95.5517 74.113V76.3732C95.5517 78.7083 93.6586 80.6014 91.3234 80.6014V80.6014C88.9883 80.6014 87.0952 78.7083 87.0952 76.3731V74.113Z"
-                fill="black"
-              />
-            </g>
-            <path
-              d="M77.5967 93.5908C79.7567 96.6883 85.8735 101.025 93.0604 93.5908"
-              stroke="black"
-              strokeWidth="3.07507"
-              strokeLinecap="round"
-            />
-          </svg> */}
-          {/* Squiggly */}
           <svg
             ref={squigglyRef}
             className={`${styles.asset} ${styles.squigglyX}`}
@@ -464,7 +375,10 @@ export default function Mission() {
             </p>
           </div>
           {/* Shader */}
-          <div ref={shaderRef} className={styles.section__shader}></div>
+          <div className="section__shader__wrapper">
+            <div ref={shaderRef} className={styles.section__shader}></div>
+          </div>
+          {/* <div ref={shaderRef} className={styles.section__shader}></div> */}
           {/* Second Section */}
           <div
             ref={secondSectionRef}

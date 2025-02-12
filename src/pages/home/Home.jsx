@@ -9,7 +9,7 @@ import Footer from "../../components/footer/footer";
 
 export default function Home() {
   return (
-    <main>
+    <main style={{ overflow: "hidden" }}>
       <Header />
       <Hero />
       <Mission />
