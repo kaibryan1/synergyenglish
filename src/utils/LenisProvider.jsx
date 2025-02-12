@@ -12,6 +12,7 @@ export function LenisProvider({ children }) {
       duration: 1.7, // Smooth scroll speed
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smooth: true,
+      smoothTouch: true,
       lerp: 0.4,
     });
 
