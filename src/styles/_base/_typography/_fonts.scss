@@ -20,7 +20,7 @@
 // Myanmar Font
 @font-face {
   font-family: "Z01-Umoe002";
-  src: url("/assets/fonts/Z01-Umoe.ttf") format("ttf");
+  src: url("/assets/fonts/Z01-Umoe002.ttf") format("ttf");
   font-style: normal;
   // font-weight: 400;
 }
@@ -68,4 +68,9 @@ h6 {
   // font-family: "Pally", sans-serif;
   font-family: "Pally", sans-serif;
   font-weight: 600;
+}
+
+.lan {
+  font-family: "Z01-Umoe002", sans-serif !important;
+  font-weight: normal;
 }

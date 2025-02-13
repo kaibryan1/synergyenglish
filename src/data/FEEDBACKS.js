@@ -8,7 +8,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "/assets/Others/Illu - Cloud.svg",
+      illustration: "assets/Others/Illu - Cloud.svg",
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "/assets/Others/Illu - Flower.svg",
+      illustration: "assets/Others/Illu - Flower.svg",
     },
     {
       id: 3,
@@ -26,9 +26,9 @@ export const FEEDBACKS = [
       parent: {
         name: "Ma Wah Wah",
         initial: "W",
-        image: "/assets/Profiles/MohMoh.png",
+        image: "assets/Profiles/MohMoh.png",
       },
-      illustration: "/assets/Others/Illu - Plant.svg",
+      illustration: "assets/Others/Illu - Plant.svg",
     },
     {
       id: 4,
@@ -38,7 +38,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "/assets/Others/Illu - Star.svg",
+      illustration: "assets/Others/Illu - Star.svg",
     },
   ],
   [
@@ -50,7 +50,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "/assets/Others/Illu - Flower.svg",
+      illustration: "assets/Others/Illu - Flower.svg",
     },
     {
       id: 6,
@@ -60,7 +60,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "/assets/Others/Illu - Star.svg",
+      illustration: "assets/Others/Illu - Star.svg",
     },
     {
       id: 7,
@@ -68,9 +68,9 @@ export const FEEDBACKS = [
       parent: {
         name: "Ma Wah Wah",
         initial: "W",
-        image: "/assets/Profiles/PoPo.png",
+        image: "assets/Profiles/PoPo.png",
       },
-      illustration: "/assets/Others/Illu - Flower.svg",
+      illustration: "assets/Others/Illu - Flower.svg",
     },
     {
       id: 8,
@@ -78,9 +78,9 @@ export const FEEDBACKS = [
       parent: {
         name: "Ma Wah Wah",
         initial: "W",
-        image: "/assets/Profiles/ShweYeeWin.png",
+        image: "assets/Profiles/ShweYeeWin.png",
       },
-      illustration: "/assets/Others/Illu - Star.svg",
+      illustration: "assets/Others/Illu - Star.svg",
     },
     {
       id: 9,
@@ -90,7 +90,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "/assets/Others/Illu - Plant.svg",
+      illustration: "assets/Others/Illu - Plant.svg",
     },
   ],
   [
@@ -102,7 +102,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "/assets/Others/Illu - Cloud.svg",
+      illustration: "assets/Others/Illu - Cloud.svg",
     },
     {
       id: 11,
@@ -112,7 +112,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "/assets/Others/Illu - Flower.svg",
+      illustration: "assets/Others/Illu - Flower.svg",
     },
     {
       id: 12,
@@ -122,7 +122,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "/assets/Others/Illu - Star.svg",
+      illustration: "assets/Others/Illu - Star.svg",
     },
     {
       id: 13,
@@ -132,7 +132,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "/assets/Others/Illu - Plant.svg",
+      illustration: "assets/Others/Illu - Plant.svg",
     },
   ],
   [
@@ -144,7 +144,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "/assets/Others/Illu - Flower.svg",
+      illustration: "assets/Others/Illu - Flower.svg",
     },
     {
       id: 15,
@@ -154,7 +154,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "/assets/Others/Illu - Flower.svg",
+      illustration: "assets/Others/Illu - Flower.svg",
     },
     {
       id: 16,
@@ -164,7 +164,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "/assets/Others/Illu - Flower.svg",
+      illustration: "assets/Others/Illu - Flower.svg",
     },
     {
       id: 17,
@@ -174,7 +174,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "/assets/Others/Illu - Flower.svg",
+      illustration: "assets/Others/Illu - Flower.svg",
     },
   ],
 ];
