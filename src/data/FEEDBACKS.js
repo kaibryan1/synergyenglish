@@ -1,6 +1,6 @@
 const isLocal = window.location.hostname === "localhost";
 
-import flower from "/assets/Others/Illu-Cloud.svg";
+const BASE_CDN_URL = import.meta.env.VITE_BASE_CDN_URL || "/assets/";
 
 const CDN_IMAGES = {
   profiles: {
@@ -16,9 +16,18 @@ const CDN_IMAGES = {
   },
 };
 
-const BASE_CDN_URL = import.meta.env.VITE_BASE_CDN_URL || "/assets/";
-console.log(BASE_CDN_URL + CDN_IMAGES.illustrations.Flower);
-console.log("/assets/Others/Illu-Cloud.svg");
+const imageBase = isLocal ? "/assets" : BASE_CDN_URL;
+
+// Profiles
+const mohmohImage = imageBase + CDN_IMAGES.profiles.mohmoh;
+const popoImage = imageBase + CDN_IMAGES.profiles.popo;
+const shweyeewinImage = imageBase + CDN_IMAGES.profiles.shweyeewin;
+
+// Illustrations
+const flowerImage = imageBase + CDN_IMAGES.illustrations.Flower;
+const cloudImage = imageBase + CDN_IMAGES.illustrations.Cloud;
+const plantImage = imageBase + CDN_IMAGES.illustrations.Plant;
+const starImage = imageBase + CDN_IMAGES.illustrations.Star;
 
 export const FEEDBACKS = [
   [
@@ -30,7 +39,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Cloud,
+      illustration: cloudImage,
     },
     {
       id: 2,
@@ -40,18 +49,18 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Flower,
+      illustration: flowerImage,
     },
     {
       id: 3,
       body: "“ From YLE Starters to KET and beyond, we offer a wide range of engaging English courses tailor ”",
       parent: {
-        name: "Test Test",
+        name: "Moh Moh",
         initial: "W",
-        image: BASE_CDN_URL + CDN_IMAGES.illustrations.Flower,
+        image: mohmohImage,
       },
       // illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Plant,
-      illustration: flower,
+      illustration: flowerImage,
     },
     {
       id: 4,
@@ -61,7 +70,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Star,
+      illustration: starImage,
     },
   ],
   [
@@ -73,7 +82,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Flower,
+      illustration: flowerImage,
     },
     {
       id: 6,
@@ -83,7 +92,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Star,
+      illustration: starImage,
     },
     {
       id: 7,
@@ -91,9 +100,9 @@ export const FEEDBACKS = [
       parent: {
         name: "Ma Wah Wah",
         initial: "W",
-        image: "assets/Profiles/PoPo.png",
+        image: popoImage,
       },
-      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Flower,
+      illustration: flowerImage,
     },
     {
       id: 8,
@@ -101,9 +110,9 @@ export const FEEDBACKS = [
       parent: {
         name: "Ma Wah Wah",
         initial: "W",
-        image: "assets/Profiles/ShweYeeWin.png",
+        image: shweyeewinImage,
       },
-      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Star,
+      illustration: starImage,
     },
     {
       id: 9,
@@ -113,7 +122,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Plant,
+      illustration: plantImage,
     },
   ],
   [
@@ -125,7 +134,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Cloud,
+      illustration: cloudImage,
     },
     {
       id: 11,
@@ -135,7 +144,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Flower,
+      illustration: flowerImage,
     },
     {
       id: 12,
@@ -145,7 +154,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Star,
+      illustration: starImage,
     },
     {
       id: 13,
@@ -155,7 +164,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Plant,
+      illustration: plantImage,
     },
   ],
   [
@@ -167,7 +176,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Flower,
+      illustration: flowerImage,
     },
     {
       id: 15,
@@ -177,7 +186,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Flower,
+      illustration: flowerImage,
     },
     {
       id: 16,
@@ -187,7 +196,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Flower,
+      illustration: starImage,
     },
     {
       id: 17,
@@ -197,7 +206,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Flower,
+      illustration: cloudImage,
     },
   ],
 ];
