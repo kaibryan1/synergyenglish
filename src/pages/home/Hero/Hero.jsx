@@ -356,7 +356,7 @@ export default function Hero() {
                     />
                   </svg>
                   <span data="zIndex">
-                    <span>FUN&nbsp;</span>
+                    <span>fun&nbsp;</span>
                   </span>
                 </div>
                 <span>
