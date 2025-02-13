@@ -1,3 +1,7 @@
+const isLocal = window.location.hostname === "localhost";
+
+import flower from "/assets/Others/Illu-Cloud.svg";
+
 const CDN_IMAGES = {
   profiles: {
     mohmoh: "/Profiles/MohMoh.png",
@@ -5,14 +9,16 @@ const CDN_IMAGES = {
     shweyeewin: "/Profiles/ShweYeeWin.png",
   },
   illustrations: {
-    Cloud: "Others/Illu-Cloud.svg",
-    Flower: "Others/Illu-Flower.svg",
-    Plant: "Others/Illu-Plant.svg",
-    Star: "Others/Illu-Star.svg",
+    Cloud: "/Others/Illu-Cloud.svg",
+    Flower: "/Others/Illu-Flower.svg",
+    Plant: "/Others/Illu-Plant.svg",
+    Star: "/Others/Illu-Star.svg",
   },
 };
 
-const BASE_CDN_URL = import.meta.env.VITE_BASE_CDN_URL || "/assets";
+const BASE_CDN_URL = import.meta.env.VITE_BASE_CDN_URL || "/assets/";
+console.log(BASE_CDN_URL + CDN_IMAGES.illustrations.Flower);
+console.log("/assets/Others/Illu-Cloud.svg");
 
 export const FEEDBACKS = [
   [
@@ -40,11 +46,12 @@ export const FEEDBACKS = [
       id: 3,
       body: "“ From YLE Starters to KET and beyond, we offer a wide range of engaging English courses tailor ”",
       parent: {
-        name: "Ma Wah Wah",
+        name: "Test Test",
         initial: "W",
-        image: "assets/Profiles/MohMoh.png",
+        image: BASE_CDN_URL + CDN_IMAGES.illustrations.Flower,
       },
-      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Plant,
+      // illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Plant,
+      illustration: flower,
     },
     {
       id: 4,
