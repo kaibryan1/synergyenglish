@@ -1,8 +1,7 @@
 const isLocal = window.location.hostname === "localhost";
 
 // const BASE_CDN_URL = import.meta.env.VITE_BASE_CDN_URL || "/assets/";
-const BASE_CDN_URL = import.meta.env.VITE_BASE_CDN_URL;
-console.log(BASE_CDN_URL);
+const BASE_CDN_URL = "https://kaibryan1.github.io/synergyenglish/assets/";
 
 const CDN_IMAGES = {
   profiles: {
