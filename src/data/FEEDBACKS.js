@@ -1,3 +1,19 @@
+const CDN_IMAGES = {
+  profiles: {
+    mohmoh: "/Profiles/MohMoh.png",
+    popo: "/Profiles/PoPo.png",
+    shweyeewin: "/Profiles/ShweYeeWin.png",
+  },
+  illustrations: {
+    Cloud: "Others/Illu-Cloud.svg",
+    Flower: "Others/Illu-Flower.svg",
+    Plant: "Others/Illu-Plant.svg",
+    Star: "Others/Illu-Star.svg",
+  },
+};
+
+const BASE_CDN_URL = import.meta.env.VITE_BASE_CDN_URL || "/assets";
+
 export const FEEDBACKS = [
   [
     {
@@ -8,7 +24,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "assets/Others/Illu - Cloud.svg",
+      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Cloud,
     },
     {
       id: 2,
@@ -18,7 +34,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "assets/Others/Illu - Flower.svg",
+      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Flower,
     },
     {
       id: 3,
@@ -28,7 +44,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: "assets/Profiles/MohMoh.png",
       },
-      illustration: "assets/Others/Illu - Plant.svg",
+      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Plant,
     },
     {
       id: 4,
@@ -38,7 +54,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "assets/Others/Illu - Star.svg",
+      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Star,
     },
   ],
   [
@@ -50,7 +66,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "assets/Others/Illu - Flower.svg",
+      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Flower,
     },
     {
       id: 6,
@@ -60,7 +76,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "assets/Others/Illu - Star.svg",
+      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Star,
     },
     {
       id: 7,
@@ -70,7 +86,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: "assets/Profiles/PoPo.png",
       },
-      illustration: "assets/Others/Illu - Flower.svg",
+      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Flower,
     },
     {
       id: 8,
@@ -80,7 +96,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: "assets/Profiles/ShweYeeWin.png",
       },
-      illustration: "assets/Others/Illu - Star.svg",
+      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Star,
     },
     {
       id: 9,
@@ -90,7 +106,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "assets/Others/Illu - Plant.svg",
+      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Plant,
     },
   ],
   [
@@ -102,7 +118,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "assets/Others/Illu - Cloud.svg",
+      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Cloud,
     },
     {
       id: 11,
@@ -112,7 +128,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "assets/Others/Illu - Flower.svg",
+      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Flower,
     },
     {
       id: 12,
@@ -122,7 +138,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "assets/Others/Illu - Star.svg",
+      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Star,
     },
     {
       id: 13,
@@ -132,7 +148,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "assets/Others/Illu - Plant.svg",
+      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Plant,
     },
   ],
   [
@@ -144,7 +160,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "assets/Others/Illu - Flower.svg",
+      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Flower,
     },
     {
       id: 15,
@@ -154,7 +170,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "assets/Others/Illu - Flower.svg",
+      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Flower,
     },
     {
       id: 16,
@@ -164,7 +180,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "assets/Others/Illu - Flower.svg",
+      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Flower,
     },
     {
       id: 17,
@@ -174,7 +190,7 @@ export const FEEDBACKS = [
         initial: "W",
         image: null,
       },
-      illustration: "assets/Others/Illu - Flower.svg",
+      illustration: BASE_CDN_URL + CDN_IMAGES.illustrations.Flower,
     },
   ],
 ];
