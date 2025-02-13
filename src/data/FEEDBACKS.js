@@ -1,6 +1,8 @@
 const isLocal = window.location.hostname === "localhost";
 
-const BASE_CDN_URL = import.meta.env.VITE_BASE_CDN_URL || "/assets/";
+// const BASE_CDN_URL = import.meta.env.VITE_BASE_CDN_URL || "/assets/";
+const BASE_CDN_URL = import.meta.env.VITE_BASE_CDN_URL;
+console.log(BASE_CDN_URL);
 
 const CDN_IMAGES = {
   profiles: {
