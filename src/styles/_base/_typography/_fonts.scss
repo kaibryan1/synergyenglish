@@ -4,15 +4,7 @@
 // Heading Font
 @font-face {
   font-family: "Pally";
-  src: url("/assets/fonts/Pally-Variable.woff2") format("woff2");
-  font-style: normal;
-  // font-weight: 400;
-}
-
-// Body font
-@font-face {
-  font-family: "Manrope";
-  src: url("/assets/fonts/Manrope-Variable.ttf") format("ttf");
+  src: url("./assets/fonts/Pally-Variable.woff2") format("woff2");
   font-style: normal;
   // font-weight: 400;
 }
@@ -20,7 +12,15 @@
 // Myanmar Font
 @font-face {
   font-family: "Z01-Umoe002";
-  src: url("/assets/fonts/Z01-Umoe002.ttf") format("ttf");
+  src: url("./assets/fonts/Z01-Umoe002.ttf") format("truetype");
+  font-style: normal;
+  // font-weight: 400;
+}
+
+// Body font
+@font-face {
+  font-family: "Manrope";
+  src: url("./assets/fonts/Manrope-Variable.ttf") format("truetype");
   font-style: normal;
   // font-weight: 400;
 }
