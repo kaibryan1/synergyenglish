@@ -7,7 +7,6 @@ import iconFlower from "/assets/Footer/Icon - Flower.svg";
 import iconAbstract from "/assets/Footer/Icon - Abstract.svg";
 import iconMoon from "/assets/Footer/Icon - Moon.svg";
 import iconPastles from "/assets/Footer/Icon - Pastles.svg";
-import { div } from "motion/react-client";
 
 // Banner
 import courseModalBanner from "/assets/Course Modal/Modal Banner.svg";

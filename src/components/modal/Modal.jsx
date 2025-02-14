@@ -1,8 +1,10 @@
 import styles from "./Modal.module.scss";
 import { motion, AnimatePresence } from "framer-motion";
 
+import { useLenis } from "../../utils/LenisProvider";
+
 // React
-import { useContext } from "react";
+import { useEffect, useContext } from "react";
 import ReactDOM from "react-dom";
 
 import { ModalContext } from "../../store/ModalProvider";
@@ -11,6 +13,28 @@ import useWindowSize from "../../utils/useWindowResize";
 
 export default function Modal() {
   const { isOpen, modalComponent, closeModal } = useContext(ModalContext);
+  const lenis = useLenis();
+
+  // Stop the scroll
+  useEffect(() => {
+    isOpen && lenis.stop();
+    document.body.style.setProperty(
+      "overflowY",
+      isOpen ? "hidden" : "auto",
+      "important"
+    );
+    document.documentElement.style.setProperty(
+      "overflowY",
+      isOpen ? "hidden" : "auto",
+      "important"
+    );
+
+    return () => {
+      lenis.start();
+      document.body.style.removeProperty("overflowY");
+      document.documentElement.style.removeProperty("overflowY");
+    };
+  }, [isOpen]);
 
   const { width } = useWindowSize();
   const isMobile = width <= 900;
