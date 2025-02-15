@@ -1,22 +1,22 @@
 import gsap from "gsap";
 
-export const revealGrid = (bentoRefs) => {
+export const revealGrid = (grid, index) => {
   const tl = gsap.timeline();
   tl.from(
-    bentoRefs, // Elements to animate
+    grid, // Elements to animate
     {
       opacity: 0,
       y: 60, // Animate upward
       duration: 0.6,
       ease: "power2.out",
-      stagger: 0.15, // Delay between each item's animation
+      delay: index * 0.1,
     }
   );
 
   return tl;
 };
 
-export const alertColorAnimation = (alertBackground, gridRef) => {
+export const alertColorAnimation = (alertBackground) => {
   const colors = [
     "var(--color-brand)",
     "var(--color-blue)",

@@ -1,12 +1,12 @@
 @use "../../../styles/index.scss" as index;
 
 .section--feedback {
-  padding-top: 80px;
+  padding-top: 100px;
   padding-bottom: 0px;
 
   @include index.below(435px) {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 80px;
+    padding-bottom: 0px;
   }
 }
 
@@ -27,6 +27,7 @@
 }
 
 .textWrapper {
+  color: var(--color-white);
   @include index.title-textWrapper;
 }
 

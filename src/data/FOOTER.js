@@ -89,7 +89,7 @@ export const FOOTER_DATA = [
       color: "var(--color-white)",
     },
     {
-      image: womanImage,
+      image: manImage,
       text: null,
       color: "var(--color-brand)",
     },

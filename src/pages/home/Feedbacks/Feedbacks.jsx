@@ -51,7 +51,7 @@ export default function Feedbacks() {
     <section
       id="feedbacks"
       ref={feedbackSectionRef}
-      className={styles["section--feedback"]}
+      className={`section--blue ${styles["section--feedback"]}`}
     >
       <div className="container">
         <div className={styles.textWrapper}>

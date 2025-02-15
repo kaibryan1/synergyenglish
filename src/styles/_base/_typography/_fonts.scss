@@ -11,10 +11,17 @@
 
 // Myanmar Font
 @font-face {
-  font-family: "Z01-Umoe002";
-  src: url("./assets/fonts/Z01-Umoe002.ttf") format("truetype");
+  font-family: "Padauk";
+  src: url("./assets/fonts/Padauk-Regular.ttf") format("truetype");
   font-style: normal;
-  // font-weight: 400;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Padauk";
+  src: url("./assets/fonts/Padauk-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
 }
 
 // Body font
@@ -71,6 +78,6 @@ h6 {
 }
 
 .lan {
-  font-family: "Z01-Umoe002", sans-serif !important;
-  font-weight: normal;
+  font-family: "Padauk", sans-serif !important;
+  font-weight: 600;
 }
