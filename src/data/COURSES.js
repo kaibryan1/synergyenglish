@@ -17,6 +17,7 @@ const imageBase = isLocal ? "/assets" : BASE_CDN_URL;
 export const COURSES = [
   {
     id: 1,
+    key: "yle",
     title: "Young Learners English Course",
     description:
       "From YLE Starters to KET and beyond, we offer a wide rangeof engaging English courses tailor. Whether your child is just beginning their English journey or preparing for international certifications, we’re here to support their growth every step of the way.",
@@ -33,6 +34,7 @@ export const COURSES = [
   },
   {
     id: 2,
+    key: "art",
     title: "Art and Extracarriculars",
     description:
       "We don't just teach kids English. We like to keep our kids positive and excited to learn with us. That's why we have tailored some free learing clubs that are fun and enjoyable for our kids. ",
@@ -49,6 +51,7 @@ export const COURSES = [
   },
   {
     id: 3,
+    key: "phonic",
     title: "Phonic For Kids",
     description:
       "Pronounciation Training for kids between age of 6 to 16. We do encourage parents to help kids build up vocabularies and pronouciations since young age. This course is designed to help your kids build a solid foundation for language fluency",
@@ -65,6 +68,7 @@ export const COURSES = [
   },
   {
     id: 4,
+    key: "generalEnglish",
     title: "General English Course",
     description:
       "Our general english course is for kids with no background english to gain In just 60 lessons, you could see remarkable improvements in your speaking and listening skills, and we have six CEFR-aligned levels (A1 to C2) to suit every learner. Our convenient Bangkok locations make it easy to learn English in-person, or you can choose online sessions for ultimate flexibility.",

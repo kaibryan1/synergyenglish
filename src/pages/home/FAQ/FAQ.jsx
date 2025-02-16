@@ -20,37 +20,50 @@ import { animate } from "motion";
 const DATA = [
   {
     id: 1,
+    key: "accordians.0",
     title: "What course book are we using?",
     body: "Power Up is a brand new course from the bestselling author team of Caroline Nixon and Michael Tomlinson. It provides the perfect start to life's great adventure, creating 'future ready' learners who embrace life with confidence. Meet vibrant characters who students will love; foster collaboration through real-world missions; deepen learners social and cognitive skills; explore embedded exam preparation; and expand the skill-set ensuring everyone reaches their full potential. ",
   },
   {
     id: 2,
+    key: "accordians.1",
     title: "How long a course would take for 6 - 9 olds?",
     body: "It takes about lorem Power Up is a brand new course from the bestselling author team of Caroline Nixon and Michael Tomlinson. It provides the perfect start to life's great adventure, creating 'future ready' learners who embrace life with confidence",
   },
   {
     id: 3,
+    key: "accordians.2",
     title: "Are the classes only through online?",
     body: "It takes about lorem Power Up is a brand new course from the bestselling author team of Caroline Nixon and Michael Tomlinson. It provides the perfect start to life's great adventure, creating 'future ready' learners who embrace life with confidence",
   },
   {
     id: 4,
+    key: "accordians.3",
     title: "From which level, are YLE Courses starting?",
     body: "It takes about lorem Power Up is a brand new course from the bestselling author team of Caroline Nixon and Michael Tomlinson. It provides the perfect start to life's great adventure, creating 'future ready' learners who embrace life with confidence",
   },
   {
     id: 5,
+    key: "accordians.4",
     title: "Can my child of 5 years old attend?",
     body: "It takes about lorem Power Up is a brand new course from the bestselling author team of Caroline Nixon and Michael Tomlinson. It provides the perfect start to life's great adventure, creating 'future ready' learners who embrace life with confidence",
   },
   {
     id: 6,
+    key: "accordians.5",
     title: "What are Synergy English Free Clubs?",
     body: "It takes about lorem Power Up is a brand new course from the bestselling author team of Caroline Nixon and Michael Tomlinson. It provides the perfect start to life's great adventure, creating 'future ready' learners who embrace life with confidence",
   },
 ];
 
+// Localization
+import "../../../localization/i18n";
+import { useTranslation } from "react-i18next";
+
 export default function FAQ() {
+  // Localization
+  const { t, i18n } = useTranslation();
+
   const [openId, setOpenId] = useState(null); // Track which item is open
 
   //   Animations
@@ -89,7 +102,10 @@ export default function FAQ() {
       <div className="container" style={{ position: "relative" }}>
         <div className={styles.faqWrapper}>
           <div className={styles.accordian}>
-            <h2 style={{ width: "13ch" }}>Learn more about our center</h2>
+            <h2 style={{ width: "13ch" }}>
+              {" "}
+              {t("home.faq.title") || "Learn more about our center"}
+            </h2>
             {DATA.map((item) => {
               return (
                 <AccordianItem

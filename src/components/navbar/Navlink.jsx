@@ -3,9 +3,14 @@ import { useEffect, useState, useRef } from "react";
 // Framer motion
 import { motion } from "framer-motion";
 
-// Components
+// Localization
+import "../../localization/i18n";
+import { useTranslation } from "react-i18next";
 
 export default function Navlink({ link, isActive, onClick }) {
+  // Localization
+  const { t, i18n } = useTranslation();
+
   const pathRef = useRef(null);
   const [pathLength, setPathLength] = useState(0);
 
@@ -52,7 +57,8 @@ export default function Navlink({ link, isActive, onClick }) {
         />
       </svg>
       <a href={link.ref} className="title">
-        {link.label}
+        {/* {link.label} */}
+        {t(`home.nav.${link.key}`)}
       </a>
     </motion.div>
   );

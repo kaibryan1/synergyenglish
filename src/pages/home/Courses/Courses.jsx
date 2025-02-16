@@ -14,23 +14,28 @@ import Class from "./Course";
 // modal
 import CoursesModal from "../CoursesModal/CoursesModal";
 
+// Localization
+import "../../../localization/i18n";
+import { useTranslation } from "react-i18next";
+
 export default function Courses() {
+  // Localization
+  const { t, i18n } = useTranslation();
+
   const { openModal, closeModal } = useContext(ModalContext);
   const handleOpenModal = (course) => {
-    console.log("Clicked");
-    openModal(CoursesModal, { content: course, closeModal }, course.title);
+    openModal(CoursesModal, { content: course, closeModal });
   };
 
   return (
-    <section className="section section--big--padding">
+    <section id="courses" className="section section--big--padding">
       <div className="container">
         <div className={styles.title__textWrapper}>
-          <p className="title">Our Courses</p>
-          <h3>Courses from age 6 to 16</h3>
+          <p className="title">{t("home.courses.sectionTitle")}</p>
+          <h3>{t("home.courses.title")}</h3>
           <p className="body_big">
-            From YLE Starters to KET and beyond, we offer a wide range of
-            engaging English courses tailored to young learners aged 6 to 16,
-            building strong foundations for lifelong success.
+            {t("home.courses.subtitle") ||
+              "From YLE Starters to KET and beyond, we offer a wide range of engaging English courses tailored to young learners aged 6 to 16, building strong foundations for lifelong success. */"}
           </p>
         </div>
         <div className="bento-grid">

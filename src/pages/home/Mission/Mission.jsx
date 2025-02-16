@@ -18,7 +18,14 @@ import {
   parallexAnimation,
 } from "./MissionAnimation";
 
+// Localization
+import "../../../localization/i18n";
+import { useTranslation } from "react-i18next";
+
 export default function Mission() {
+  // Localization
+  const { t, i18n } = useTranslation();
+
   const shaderRef = useRef(null);
   const missionSectionRef = useRef(null);
 
@@ -338,18 +345,16 @@ export default function Mission() {
                 ref={(el) => (firstSectionTextRef.current[0] = el)}
                 className="title"
               >
-                Our Mission
+                {t("home.mission.sectionTitle")}
               </p>
               <h2 ref={(el) => (firstSectionTextRef.current[1] = el)}>
-                Fun learning is the most productive one!
+                {t("home.mission.firstTitle")}
               </h2>
               <p
                 ref={(el) => (firstSectionTextRef.current[2] = el)}
                 className="body_big"
               >
-                We believe our kids learn English best when they are having fun.
-                So, we offer engaging lessons and as we see the smiles on our
-                young kids, we are doing our best job as teachers.
+                {t("home.mission.firstSubtitle")}
               </p>
             </div>
           </div>
@@ -358,20 +363,16 @@ export default function Mission() {
               ref={(el) => (secondSectionTextRef.current[0] = el)}
               className="title"
             >
-              Our Mission
+              {t("home.mission.sectionTitle")}
             </p>
             <h2 ref={(el) => (secondSectionTextRef.current[1] = el)}>
-              That’s why, we keep <br />
-              our kids happy!
+              {t("home.mission.secondTitle")}
             </h2>
             <p
               ref={(el) => (secondSectionTextRef.current[2] = el)}
               className="body_big"
             >
-              Our professional teachers truly understand the nature of our kids.
-              Kids learn and do things better when they are in relax and
-              comfortable environments. That’s whywe don’t just teach! We as
-              well put smiles on our kids!
+              {t("home.mission.secondSubtitle")}
             </p>
           </div>
           {/* Shader */}

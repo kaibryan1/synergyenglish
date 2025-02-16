@@ -16,6 +16,10 @@
   margin-bottom: 64px;
   flex-wrap: wrap;
 
+  & h2 {
+    max-width: 16ch;
+  }
+
   @include index.below(700px) {
     justify-content: center;
     text-align: center;

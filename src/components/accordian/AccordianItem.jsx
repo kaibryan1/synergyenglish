@@ -4,7 +4,14 @@ import styles from "./AccordianItem.module.scss";
 
 import { useState, useEffect, useRef } from "react";
 
+// localization
+import "../../localization/i18n";
+import { useTranslation } from "react-i18next";
+
 export default function AccordianItem({ accordian, isOpen, onToggle }) {
+  // Localization
+  const { t, i18n } = useTranslation();
+
   const bodyTextRef = useRef(null);
   const [heightOffset, setHeightOffset] = useState(0);
 
@@ -26,7 +33,9 @@ export default function AccordianItem({ accordian, isOpen, onToggle }) {
       onClick={onToggle}
     >
       <div className={styles.accordian__header}>
-        <h4 className="title">{accordian.title}</h4>
+        <h4 className="title">
+          {t(`home.faq.${accordian.key}.title`) || accordian.title}
+        </h4>
         <div className={styles.accordian__navBtn}>
           {!isOpen ? (
             <span className={styles.accordian__navBtn__open}>
@@ -109,7 +118,7 @@ export default function AccordianItem({ accordian, isOpen, onToggle }) {
           transition={{ duration: 0.4, ease: "easeInOut" }}
           ref={bodyTextRef}
         >
-          {accordian.body}
+          {t(`home.faq.${accordian.key}.body`) || accordian.body}
         </motion.p>
       </div>
     </motion.button>

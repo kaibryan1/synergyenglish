@@ -14,7 +14,14 @@ import { FEEDBACKS } from "../../../data/FEEDBACKS";
 import { useRef } from "react";
 import { useEffect } from "react";
 
+// Localization
+import "../../../localization/i18n";
+import { useTranslation } from "react-i18next";
+
 export default function Feedbacks() {
+  // Localization
+  const { t, i18n } = useTranslation();
+
   const feedbackRowRefs = useRef([]);
   const feedbackSectionRef = useRef(null);
 
@@ -33,15 +40,15 @@ export default function Feedbacks() {
         },
       });
 
-      feedbackRowRefs.current.forEach((item, index) => {
-        tl.to(
-          item,
-          {
-            xPercent: gsap.utils.random(4, 6) + index * 0.1,
-          },
-          0
-        );
-      });
+      // Card Animation
+      tl.to(
+        feedbackRowRefs.current,
+        {
+          xPercent: 6,
+          stagger: 0.1,
+        },
+        0
+      );
     }, [feedbackRowRefs, feedbackSectionRef]);
 
     return () => context.revert();
@@ -55,9 +62,13 @@ export default function Feedbacks() {
     >
       <div className="container">
         <div className={styles.textWrapper}>
-          <p className="title">Feedbacks</p>
-          <h3>View our Synergy parents’ feedbacks</h3>
-          <Button>Join us</Button>
+          <p className="title">
+            {t("home.feedbacks.sectionTitle") || "Feedbacks"}
+          </p>
+          <h3>
+            {t("home.feedbacks.title") || "View our Synergy parents’ feedbacks"}
+          </h3>
+          <Button>{t("home.feedbacks.button") || "Join us"}</Button>
         </div>
       </div>
       <div className={styles.banner}>

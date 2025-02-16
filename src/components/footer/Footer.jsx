@@ -25,7 +25,14 @@ import gsap from "gsap";
 import { scrollAnimation } from "./FooterAnimation";
 import { useEffect, useRef } from "react";
 
+// Localization
+import "../../localization/i18n";
+import { useTranslation } from "react-i18next";
+
 export default function Footer() {
+  // Localization
+  const { t, i18n } = useTranslation();
+
   const rowRefs = useRef([]);
 
   useEffect(() => {
@@ -46,8 +53,7 @@ export default function Footer() {
         <div className="container">
           <div className={styles.header}>
             <h2>
-              Come join our fun <br />
-              English lessons!
+              {t("home.footer.title") || "Come join our fun English lessons!"}
             </h2>
             <div className={styles.actions}>
               <div className={styles.socialIcons}>
@@ -121,7 +127,7 @@ export default function Footer() {
                   </defs>
                 </svg>
               </div>
-              <Button>Join Us</Button>
+              <Button>{t("home.footer.button") || "Join Us"}</Button>
             </div>
           </div>
           <div className={styles.links}>
@@ -135,7 +141,7 @@ export default function Footer() {
                     src={iconFlower}
                     alt="Flower Icon brand assets"
                   />
-                  <a href="#">Home</a>
+                  <a href="#">{t("home.footer.nav.Home") || "Home"}</a>
                 </li>
                 <li>
                   <img
@@ -143,7 +149,9 @@ export default function Footer() {
                     src={iconMoon}
                     alt="Flower Icon brand assets"
                   />
-                  <a href="#">Our Mission</a>
+                  <a href="#">
+                    {t("home.footer.nav.Mission") || "Our Mission"}
+                  </a>
                 </li>
                 <li>
                   <img
@@ -151,7 +159,7 @@ export default function Footer() {
                     src={iconPastles}
                     alt="Pastles Icon brand assets"
                   />
-                  <a href="#">Courses</a>
+                  <a href="#">{t("home.footer.nav.Courses") || "Courses"}</a>
                 </li>
                 <li>
                   <img
@@ -159,23 +167,25 @@ export default function Footer() {
                     src={iconStar}
                     alt="Star Icon brand assets"
                   />
-                  <a href="#">FAQ Questions</a>
+                  <a href="#">{t("home.footer.nav.Faq") || "FAQ Questions"}</a>
                 </li>
-                <li>
+                {/* <li>
                   <img
                     className={styles.brandIcons}
                     src={iconPop}
                     alt="Abstract Icon brand assets"
                   />
                   <a href="#">About Us</a>
-                </li>
+                </li> */}
                 <li>
                   <img
                     className={styles.brandIcons}
                     src={iconPlant}
                     alt="Plant Icon brand assets"
                   />
-                  <a href="#">Feedbacks</a>
+                  <a href="#">
+                    {t("home.footer.nav.Feedbacks") || "Feedbacks"}
+                  </a>
                 </li>
               </ul>
             </div>
@@ -185,7 +195,9 @@ export default function Footer() {
               <ul className={styles.navWrapper}>
                 <li>
                   <img className={styles.brandIcons} src={iconPlay} alt="" />
-                  <a href="#">Watch our video</a>
+                  <a href="#">
+                    {t("home.footer.learnMore.Video") || "Watch our video"}
+                  </a>
                 </li>
                 <li>
                   <img
@@ -193,11 +205,18 @@ export default function Footer() {
                     src={iconAbstract}
                     alt=""
                   />
-                  <a href="#">Art and Craft</a>
+                  <a href="#">
+                    {" "}
+                    {t("home.footer.learnMore.Art") || "Art and craft"}
+                  </a>
                 </li>
                 <li>
                   <img className={styles.brandIcons} src={iconSquare} alt="" />
-                  <a href="#">Free Synergy Clubs</a>
+                  <a href="#">
+                    {" "}
+                    {t("home.footer.learnMore.FreeClubs") ||
+                      "Free Synergy Clubs"}
+                  </a>
                 </li>
               </ul>
             </div>

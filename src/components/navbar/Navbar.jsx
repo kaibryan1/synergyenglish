@@ -1,6 +1,10 @@
 import styles from "./Navbar.module.scss";
 import Button from "../button/Button";
 
+// Localization
+import "../../localization/i18n";
+import { useTranslation } from "react-i18next";
+
 // Context
 import { ActiveNavContext } from "../../store/ActiveNavProvider";
 
@@ -10,15 +14,16 @@ import { useContext, useEffect } from "react";
 // Components
 import Navlink from "./Navlink";
 import logo from "/assets/Logo Type.svg";
+import LanguageSwitch from "../languageSwitch/LanguageSwitch";
 
 export default function Navbar() {
   // Links
   const links = [
-    { id: "hero", label: "Home", ref: "home" },
-    { id: "mission", label: "Our Mission", ref: "our mission" },
-    { id: "courses", label: "Courses", ref: "courses" },
-    { id: "faq", label: "FAQ", ref: "faq" },
-    { id: "feedbacks", label: "Feedbacks", ref: "feedbacks" },
+    { id: "hero", label: "Home", ref: "home", key: "Home" },
+    { id: "mission", label: "Our Mission", ref: "our mission", key: "Mission" },
+    { id: "courses", label: "Courses", ref: "courses", key: "Courses" },
+    { id: "faq", label: "FAQ", ref: "faq", key: "FAQ" },
+    { id: "feedbacks", label: "Feedbacks", ref: "feedbacks", key: "Feedbacks" },
   ];
 
   const { isNavActive, setIsNavActive, handleSelectNav } =
@@ -39,6 +44,8 @@ export default function Navbar() {
     );
 
     sections.forEach((section) => observer.observe(section));
+
+    // Localization
 
     return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
@@ -61,7 +68,8 @@ export default function Navbar() {
         })}
       </div>
       <div className={styles.buttonWrapper}>
-        <Button icon={null}>Join us</Button>
+        {/* <Button icon={null}>Join us</Button> */}
+        <LanguageSwitch />
       </div>
     </div>
   );

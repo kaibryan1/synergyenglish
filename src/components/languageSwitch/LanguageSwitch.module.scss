@@ -1,0 +1,44 @@
+@use "../../styles/index.scss" as index;
+
+.switch {
+  border: 2px solid black;
+  border-radius: 1000px;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  height: index.fluid-value(345px, 1440px, 40px, 50px);
+  box-shadow: var(--shadow-small);
+}
+
+.en,
+.my {
+  display: inline-block;
+  padding-inline: 20px;
+  border-radius: 1000px;
+  overflow: hidden;
+  line-height: 150%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: index.fluid-value(345px, 1440px, 50px, 80px);
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 0;
+  opacity: 1 !important;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-brand);
+  }
+}
+
+.en.active,
+.my.active {
+  border: 1.5px solid #000000;
+  background-color: var(--color-cloud);
+  box-shadow: -1px 2px 0px 0px #000000;
+}
+
+.my.active {
+  box-shadow: 1px 2px 0px 0px #000000;
+}

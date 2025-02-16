@@ -12,7 +12,14 @@ import { revealGrid, alertColorAnimation } from "./CourseAnimation";
 
 import Button from "../../../components/button/Button";
 
+// Localization
+import "../../../localization/i18n";
+import { useTranslation } from "react-i18next";
+
 export default function Course({ course, index, onClick }) {
+  // Localization
+  const { t, i18n } = useTranslation();
+
   const gridRef = useRef(null);
   const alertIconBgRef = useRef(null);
 
@@ -45,11 +52,14 @@ export default function Course({ course, index, onClick }) {
     >
       <div className={`${styles.classCard} ${styles[`card-${index + 1}`]}`}>
         <div className={`${styles.content}`}>
-          <h3>{course.title}</h3>
-          <p>{course.description}</p>
+          <h3>{t(`home.courses.courseDetails.${course.key}.title`)}</h3>
+          <p>
+            {" "}
+            {t(`home.courses.courseDetails.${course.key}.shortDescription`)}
+          </p>
         </div>
         <div className={styles.buttonWrapper}>
-          <Button>Learn more</Button>
+          <Button>{t("home.courses.button")}</Button>
         </div>
         <div className={styles.illustration}>
           <img src={course.illustration} alt="Illustration" />
