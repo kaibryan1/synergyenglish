@@ -1,6 +1,17 @@
 @use "../../_abstracts/mixins" as mixins;
 @use "../_typography/type-scale" as type;
 
+:root {
+  --font: "Pally", sans-serif;
+  --font--weight: 600;
+  --font-spacing-word-h1: 0px;
+  --font-spacing-word-h2: 0px;
+  --font-spacing-letter-medium: 0px;
+  --font-spacing-letter-small: 0px;
+  --font-spacing-line-small: 105%;
+  --font-spacing-line-medium: 135%;
+}
+
 // Heading Font
 @font-face {
   font-family: "Pally";
@@ -62,19 +73,36 @@ body {
 }
 
 h1,
-h2 {
-  letter-spacing: -2.2px;
-}
-
-h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
   // font-family: "Pally", sans-serif;
-  font-family: "Pally", sans-serif;
-  font-weight: 600;
+  font-family: var(--font);
+  font-weight: var(--font-weight);
+}
+
+h1,
+h2 {
+  letter-spacing: -2.2px;
+}
+
+h1,
+h2 {
+  font-family: "Pally", sans-serif !important;
+  word-spacing: var(--font-spacing-word-h1);
+  letter-spacing: var(--font-spacing-letter-medium);
+  line-height: var(--font-spacing-line-small);
+}
+
+h3,
+h4,
+h5 {
+  font-family: "Pally", sans-serif !important;
+  word-spacing: var(--font-spacing-word-h2);
+  letter-spacing: var(--font-spacing-letter-small);
+  line-height: var(--font-spacing-line-small);
 }
 
 .lan {

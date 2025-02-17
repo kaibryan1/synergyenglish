@@ -58,9 +58,9 @@ export default function Feedbacks() {
     <section
       id="feedbacks"
       ref={feedbackSectionRef}
-      className={`section--blue ${styles["section--feedback"]}`}
+      className={`section--brand ${styles["section--feedback"]}`}
     >
-      <div className="container">
+      <div className={`container ${styles.header}`}>
         <div className={styles.textWrapper}>
           <p className="title">
             {t("home.feedbacks.sectionTitle") || "Feedbacks"}
@@ -68,7 +68,9 @@ export default function Feedbacks() {
           <h3>
             {t("home.feedbacks.title") || "View our Synergy parents’ feedbacks"}
           </h3>
-          <Button>{t("home.feedbacks.button") || "Join us"}</Button>
+          <div className={styles.buttonWrapper}>
+            <Button>{t("home.feedbacks.button") || "Join us"}</Button>
+          </div>
         </div>
       </div>
       <div className={styles.banner}>

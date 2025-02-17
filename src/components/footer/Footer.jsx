@@ -30,6 +30,7 @@ import "../../localization/i18n";
 import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const bannerRef = useRef(null);
   // Localization
   const { t, i18n } = useTranslation();
 
@@ -38,12 +39,29 @@ export default function Footer() {
   useEffect(() => {
     const context = gsap.context(() => {
       if (rowRefs.current) {
-        const sliderTimeline = gsap.timeline();
+        const sliderTimeline = gsap.timeline({
+          paused: true,
+        });
+
+        // Intersection observer
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              sliderTimeline.play();
+            } else {
+              sliderTimeline.pause();
+            }
+          });
+        });
+        observer.observe(bannerRef.current);
+
         sliderTimeline.add(scrollAnimation(rowRefs.current));
       }
     }, rowRefs);
 
-    return () => context.revert();
+    return () => {
+      context.revert();
+    };
   }, []);
   return (
     <div>
@@ -323,7 +341,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className={styles.banner}>
+        <div ref={bannerRef} className={styles.banner}>
           {FOOTER_DATA.map((row, index) => {
             return (
               <div

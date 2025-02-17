@@ -10,14 +10,20 @@
   }
 }
 
+h1 {
+  letter-spacing: 0px !important;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 64px;
+  align-items: flex-end;
+  margin-bottom: 80px;
   flex-wrap: wrap;
 
   & h2 {
-    max-width: 16ch;
+    max-width: 14ch;
+    margin-bottom: 0;
   }
 
   @include index.below(700px) {

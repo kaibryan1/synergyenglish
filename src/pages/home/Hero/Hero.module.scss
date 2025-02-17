@@ -46,6 +46,20 @@
   }
 }
 
+.hero__title {
+  max-width: 90vw;
+  display: flex;
+  gap: 0;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  white-space: pre-wrap !important;
+
+  & span {
+    display: inline-block;
+  }
+}
+
 .content {
   display: inline-block;
   position: relative;
@@ -88,7 +102,7 @@
   scale: 1.2;
 
   @include index.below(500px) {
-    bottom: 12vh;
+    bottom: 7vh;
     left: 15vw;
   }
 }
@@ -116,8 +130,8 @@
   }
 
   @include index.below(500px) {
-    top: 17vh;
-    left: 2vh;
+    top: 12vh;
+    left: 0vh;
   }
 }
 
@@ -144,6 +158,10 @@
   position: absolute;
   bottom: 13vh;
   right: 6vw;
+
+  @include index.below(500px) {
+    right: -2vw;
+  }
 }
 
 .second.squiggly {

@@ -3,6 +3,7 @@
 .card {
   position: relative;
   border: 2px solid var(--color-dark);
+  background-color: var(--color-white);
   padding: index.fluid-value(435px, 1440px, 24px, 40px);
   width: max-content;
   border-radius: index.fluid-value(435px, 1440px, 24px, 35px);

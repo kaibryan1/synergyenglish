@@ -7,6 +7,7 @@ export const setInitialState = (secondSectionText) => {
 export const textRevealAnimation = (
   secondSection,
   shader,
+  firstSectionText,
   secondSectionText
 ) => {
   const tl = gsap.timeline();
@@ -26,6 +27,14 @@ export const textRevealAnimation = (
         ease: "power1.inOut",
       },
       "<+=0.08"
+    )
+    .to(
+      firstSectionText,
+      {
+        opacity: 0,
+        duration: 1,
+      },
+      "<+0.05"
     )
     .to(
       secondSectionText,

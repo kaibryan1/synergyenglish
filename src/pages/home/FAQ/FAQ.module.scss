@@ -26,7 +26,7 @@
   max-width: index.fluid-value(435px, 1440px, 400px, 700px);
   margin-inline: auto;
 
-  & h2 {
+  & h3 {
     position: relative;
     z-index: 3;
     text-align: center;
@@ -62,7 +62,7 @@
   @include index.below(500px) {
     top: auto;
     bottom: 10% !important;
-    left: -16vw;
+    left: -24vw;
     scale: 0.7;
   }
 }
@@ -88,7 +88,7 @@
   @include index.below(500px) {
     top: auto;
     bottom: 19vh !important;
-    right: -10vw;
+    left: 10%;
     scale: 0.7;
   }
 }
@@ -104,7 +104,7 @@
   @include index.below(500px) {
     top: auto;
     bottom: -4vh !important;
-    left: -14%;
+    left: -18%;
   }
 }
 

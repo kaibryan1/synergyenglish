@@ -46,7 +46,6 @@ export default function Navbar() {
     sections.forEach((section) => observer.observe(section));
 
     // Localization
-
     return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
 

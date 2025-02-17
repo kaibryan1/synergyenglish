@@ -106,6 +106,7 @@ export default function Mission() {
           textRevealAnimation(
             secondSectionRef.current,
             shaderRef.current,
+            firstSectionTextRef.current,
             secondSectionTextRef.current
           ),
           "<"

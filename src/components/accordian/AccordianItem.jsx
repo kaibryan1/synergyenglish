@@ -111,7 +111,7 @@ export default function AccordianItem({ accordian, isOpen, onToggle }) {
         <motion.p
           initial={{ maxHeight: 0, opacity: 0 }}
           animate={{
-            paddingTop: isOpen ? "20px" : 0,
+            marginTop: isOpen ? "20px" : 0,
             maxHeight: isOpen ? heightOffset : 0,
             opacity: isOpen ? 1 : 0,
           }}

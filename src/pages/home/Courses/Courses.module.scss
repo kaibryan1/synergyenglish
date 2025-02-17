@@ -47,7 +47,7 @@
   }
 
   @include index.below(700px) {
-    padding: 20px;
+    padding: 28px;
   }
 }
 
@@ -90,6 +90,7 @@
 
 .buttonWrapper {
   position: absolute;
+  z-index: 2;
   bottom: 40px;
   left: 40px;
 

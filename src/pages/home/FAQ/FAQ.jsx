@@ -102,10 +102,9 @@ export default function FAQ() {
       <div className="container" style={{ position: "relative" }}>
         <div className={styles.faqWrapper}>
           <div className={styles.accordian}>
-            <h2 style={{ width: "13ch" }}>
-              {" "}
+            <h3 style={{ width: "13ch" }}>
               {t("home.faq.title") || "Learn more about our center"}
-            </h2>
+            </h3>
             {DATA.map((item) => {
               return (
                 <AccordianItem

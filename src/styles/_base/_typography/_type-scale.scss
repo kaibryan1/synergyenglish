@@ -182,7 +182,7 @@ h4,
 
 .body_big {
   @include fluid-type(435px, 1440px, 19px, 22px);
-  line-height: 135%;
+  line-height: var(--font-spacing-line-medium);
   letter-spacing: -0.06rem;
 
   @include mixins.below(450px) {

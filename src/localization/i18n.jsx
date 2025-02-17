@@ -3,11 +3,15 @@ import { initReactI18next } from "react-i18next";
 
 i18n.use(initReactI18next).init({
   debug: true,
-  fallbackLng: "my",
+  fallbackLng: "en",
   resources: {
     en: {
       translation: {
         home: {
+          button: {
+            learn: "Learn More",
+            join: "Join us",
+          },
           nav: {
             Home: "Home",
             Mission: "Mission",
@@ -137,7 +141,7 @@ i18n.use(initReactI18next).init({
             accordians: [
               {
                 title: "What course book are we using?",
-                body: "Power Up is a brand new course from the bestselling author team of Caroline Nixon and Michael Tomlinson. It provides the perfect start to life's great adventure, creating 'future ready' learners who embrace life with confidence",
+                body: "Power Up is a brand new course from the bestselling author team of Caroline Nixon and Michael Tomlinson. It provides the perfect start to life's great adventure, creating 'future ready' learners who embrace life with confidence.",
               },
               {
                 title: "How long a course would take for 6 - 9 olds?",
@@ -162,13 +166,13 @@ i18n.use(initReactI18next).init({
             ],
           },
           feedbacks: {
-            sectionTitle: "မှတ်ချက်များ",
-            title: "Synergy မှ ကျောင်းသားမိဘများရဲ့ မှတ်ချက်များ",
-            button: "သင်တန်းအပ်ရန်",
+            sectionTitle: "Feedbacks",
+            title: "Feedbacks from our lovely parents",
+            button: "Join us",
           },
           footer: {
-            title: "အတူတူ ပျော်ပျော်ရွှင်ရွှင် သင်ယူကြ‌ရအောင်",
-            button: "သင်တန်းအပ်ရန်",
+            title: "Come join our Synergy classes",
+            button: "Join us",
             nav: {
               Home: "Home",
               Mission: "Our Mission",
@@ -188,6 +192,10 @@ i18n.use(initReactI18next).init({
     my: {
       translation: {
         home: {
+          button: {
+            learn: "ပိုမိုလေ့လာရန်",
+            join: "သင်တန်းအပ်ရန်",
+          },
           nav: {
             Home: "ပင်မ",
             Mission: "ရည်ရွယ်ချက်",
