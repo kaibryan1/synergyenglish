@@ -88,7 +88,7 @@
 
 h1,
 .h1 {
-  @include fluid-type(435px, 1440px, 50px, 80px);
+  @include fluid-type(435px, 1440px, 44px, 80px);
   letter-spacing: -0.6%;
   margin-bottom: 64px;
   line-height: 110%;
@@ -102,13 +102,13 @@ h1,
 
 h2,
 .h2 {
-  @include fluid-type(435px, 1440px, 54px, 64px);
+  @include fluid-type(435px, 1440px, 38px, 64px);
   letter-spacing: 0%;
   margin-bottom: 32px;
   line-height: 110%;
 
   @include mixins.below(450px) {
-    @include fluid-type(435px, 1440px, 34px, 42px);
+    @include fluid-type(435px, 1440px, 32px, 38px);
     line-height: 115%;
     margin-bottom: 20px;
   }

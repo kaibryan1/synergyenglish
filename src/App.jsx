@@ -13,8 +13,16 @@ import ModalProvider from "./store/ModalProvider";
 import "./localization/i18n";
 import { useTranslation } from "react-i18next";
 
+// Themning
+import { ThemeProvider } from "styled-components";
+import { enTheme, myTheme } from "./themes/theme";
 function App() {
+  // Localization
   const { t, i18n } = useTranslation();
+
+  // Theme based on lanauge
+  const currentLanguage = i18n.language;
+  const theme = currentLanguage === "en" ? enTheme : myTheme;
 
   // Localization Effect
   useEffect(() => {
@@ -24,11 +32,13 @@ function App() {
   return (
     <>
       <LenisProvider>
-        <ModalProvider>
-          <ActiveNavProvider>
-            <Home></Home>
-          </ActiveNavProvider>
-        </ModalProvider>
+        <ThemeProvider theme={theme}>
+          <ModalProvider>
+            <ActiveNavProvider>
+              <Home></Home>
+            </ActiveNavProvider>
+          </ModalProvider>
+        </ThemeProvider>
       </LenisProvider>
     </>
   );

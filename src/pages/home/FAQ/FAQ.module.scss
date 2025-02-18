@@ -27,9 +27,14 @@
   margin-inline: auto;
 
   & h3 {
+    // width: 60% !important;
     position: relative;
     z-index: 3;
     text-align: center;
+
+    @include index.below(500px) {
+      width: 80% !important;
+    }
   }
 }
 

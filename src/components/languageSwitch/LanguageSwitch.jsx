@@ -8,17 +8,22 @@ import { useTranslation } from "react-i18next";
 
 export default function LanguageSwitch() {
   const { t, i18n } = useTranslation();
-  const [active, isActive] = useState("en");
+  const [active, setIsActive] = useState(navigator.language);
+
+  // Normalize language to match keys ("en" or "my")
+  const getNormalizedLanguage = (lang) => {
+    return lang && lang.toLowerCase().startsWith("en") ? "en" : "my";
+  };
 
   const handleActiveLanguage = (item) => {
-    isActive((prev) => (prev === "my" ? "en" : "my"));
+    setIsActive(item);
     i18n.changeLanguage(item);
   };
 
   // font Switch
   useEffect(() => {
-    const currentLanguage = i18n.language;
-    if (currentLanguage === "en") {
+    const currentLanguage = getNormalizedLanguage(navigator.language);
+    if (i18n.language === "en") {
       document.documentElement.style.setProperty("--font", "Pally");
       document.documentElement.style.setProperty("--font-weight", "600");
       document.documentElement.style.setProperty(
@@ -52,7 +57,7 @@ export default function LanguageSwitch() {
       document.documentElement.style.setProperty("--font-weight", "bold");
       document.documentElement.style.setProperty(
         "--font-spacing-word-h1",
-        "0px"
+        "-10px"
       );
       document.documentElement.style.setProperty(
         "--font-spacing-word-h2",
@@ -77,7 +82,7 @@ export default function LanguageSwitch() {
         "158%"
       );
     }
-  }, [active]);
+  }, [i18n.language]);
 
   return (
     <button className={styles.switch}>

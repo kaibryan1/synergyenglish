@@ -2,7 +2,7 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
 i18n.use(initReactI18next).init({
-  debug: true,
+  // debug: true,
   fallbackLng: "en",
   resources: {
     en: {
@@ -358,7 +358,7 @@ i18n.use(initReactI18next).init({
             button: "သင်တန်းအပ်ရန်",
           },
           footer: {
-            title: "အတူတူ ပျော်ပျော်ရွှင်ရွှင် သင်ယူကြ‌ရအောင်",
+            title: "ပျော်ပျော်ရွှင်ရွှင် သင်ယူကြ‌ရအောင်",
             button: "သင်တန်းအပ်ရန်",
             nav: {
               Home: "ပင်မစာမျက်နှာ",
