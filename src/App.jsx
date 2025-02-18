@@ -26,7 +26,7 @@ function App() {
 
   // Localization Effect
   useEffect(() => {
-    i18n.changeLanguage(navigator.language);
+    i18n.changeLanguage("en");
   }, []);
 
   return (

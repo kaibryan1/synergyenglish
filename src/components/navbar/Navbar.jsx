@@ -13,8 +13,10 @@ import { useContext, useEffect } from "react";
 
 // Components
 import Navlink from "./Navlink";
-import logo from "/assets/Logo Type.svg";
+import logo from "/assets/SynergyLogoSymbol.svg";
 import LanguageSwitch from "../languageSwitch/LanguageSwitch";
+
+console.log(logo);
 
 export default function Navbar() {
   // Links
