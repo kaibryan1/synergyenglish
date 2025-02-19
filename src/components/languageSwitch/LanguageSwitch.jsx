@@ -26,6 +26,7 @@ export default function LanguageSwitch() {
 
   // font Switch
   useEffect(() => {
+    i18n.changeLanguage(savedLanguage);
     if (i18n.language === "en") {
       document.documentElement.setAttribute("data-language", "en");
     } else {
