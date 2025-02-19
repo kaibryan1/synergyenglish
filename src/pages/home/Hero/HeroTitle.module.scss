@@ -16,7 +16,6 @@
     & img {
       position: absolute;
       height: 48px;
-      overflow: visible;
       @include index.below(550px) {
         height: 32px;
       }

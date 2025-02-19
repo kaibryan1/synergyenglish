@@ -7,8 +7,11 @@ import "../../localization/i18n";
 import { useTranslation } from "react-i18next";
 
 export default function LanguageSwitch() {
+  // Get the lanauge from local storage or fallback en
+  const savedLanguage = localStorage.getItem("language") || "en";
+
   const { t, i18n } = useTranslation();
-  const [active, setIsActive] = useState("en");
+  const [active, setIsActive] = useState(savedLanguage);
 
   // Normalize language to match keys ("en" or "my")
   const getNormalizedLanguage = (lang) => {
@@ -17,12 +20,12 @@ export default function LanguageSwitch() {
 
   const handleActiveLanguage = (item) => {
     setIsActive(item);
+    localStorage.setItem("language", item);
     i18n.changeLanguage(item);
   };
 
   // font Switch
   useEffect(() => {
-    const currentLanguage = getNormalizedLanguage(navigator.language);
     if (i18n.language === "en") {
       document.documentElement.setAttribute("data-language", "en");
     } else {

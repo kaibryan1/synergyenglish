@@ -25,9 +25,11 @@ function App() {
   const theme = currentLanguage === "en" ? enTheme : myTheme;
 
   // Localization Effect
-  useEffect(() => {
-    i18n.changeLanguage("en");
-  }, []);
+  // useEffect(() => {
+  //   const savedLanguage = localStorage.getItem("language") || "en";
+  //   console.log(savedLanguage);
+  //   // i18n.changeLanguage(savedLanguage);
+  // }, []);
 
   return (
     <>
