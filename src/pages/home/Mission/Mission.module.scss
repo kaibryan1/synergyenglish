@@ -107,6 +107,9 @@
 }
 
 .kidIconOrange {
+  position: relative;
+  top: -30%;
+  left: 3vw;
   width: index.fluid-value(345px, 1440px, 140px, 240px);
   height: index.fluid-value(345px, 1440px, 140px, 240px);
 }
@@ -134,8 +137,8 @@
   position: absolute;
   bottom: 8%;
   right: 8%;
-  width: index.fluid-value(345px, 1440px, 140px, 200px);
-  height: index.fluid-value(345px, 1440px, 140px, 200px);
+  width: index.fluid-value(345px, 1440px, 125px, 180px);
+  height: index.fluid-value(345px, 1440px, 125px, 180px);
   z-index: 100;
 
   @include index.below(435px) {

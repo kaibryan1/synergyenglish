@@ -88,43 +88,103 @@
 
 h1,
 .h1 {
-  @include fluid-type(435px, 1440px, 44px, 80px);
-  letter-spacing: -0.6%;
-  margin-bottom: 64px;
-  line-height: 110%;
+  margin-bottom: 24px;
 
   @include mixins.below(450px) {
-    // @include fluid-type(435px, 1440px, 34px, 48px);
-    line-height: 115%;
-    margin-bottom: 48px;
+    margin-bottom: 16px;
   }
 }
 
+html[data-language="en"] h1,
+html[data-language="en"] .h1 {
+  @include fluid-type(435px, 1440px, 44px, 80px);
+  letter-spacing: -0.6%;
+  line-height: 110%;
+  font-weight: 600;
+
+  @include mixins.below(550px) {
+    font-size: 44px;
+    line-height: 115%;
+  }
+}
+
+html[data-language="my"] h1,
+html[data-language="my"] .h1 {
+  font-weight: 600;
+  @include fluid-type(550px, 1440px, 48px, 52px);
+  letter-spacing: -0.6%;
+  line-height: 150%;
+
+  @include mixins.below(550px) {
+    font-size: 36px;
+    line-height: 140%;
+  }
+}
+
+// H2 stylings
 h2,
 .h2 {
-  @include fluid-type(435px, 1440px, 38px, 64px);
-  letter-spacing: 0%;
   margin-bottom: 32px;
+}
+
+html[data-language="en"] h2,
+html[data-language="en"] .h2 {
+  @include fluid-type(435px, 1440px, 56px, 64px);
+  letter-spacing: 0%;
   line-height: 110%;
 
   @include mixins.below(450px) {
-    @include fluid-type(435px, 1440px, 32px, 38px);
+    font-size: 42px;
     line-height: 115%;
     margin-bottom: 20px;
   }
 }
 
+html[data-language="my"] h2,
+html[data-language="my"] .h2 {
+  font-weight: 600;
+  @include fluid-type(550px, 1440px, 32px, 44px);
+  letter-spacing: -0.6%;
+  line-height: 150%;
+
+  @include mixins.below(550px) {
+    font-size: 27px;
+    line-height: 140%;
+  }
+}
+
+// H3 Stylings
 h3,
 .h3 {
-  @include fluid-type(435px, 1440px, 40px, 48px);
-  letter-spacing: 0%;
   margin-bottom: 24px;
+
+  @include mixins.below(450px) {
+    margin-bottom: 20px;
+  }
+}
+
+html[data-language="en"] h3,
+html[data-language="en"] .h3 {
+  @include fluid-type(435px, 1440px, 40px, 56px);
+  letter-spacing: 0%;
   line-height: 115%;
 
   @include mixins.below(450px) {
-    @include fluid-type(435px, 1440px, 30px, 36px);
+    font-size: 34px;
     line-height: 115%;
-    margin-bottom: 20px;
+  }
+}
+
+html[data-language="my"] h3,
+html[data-language="my"] .h3 {
+  font-weight: 600;
+  @include fluid-type(550px, 1440px, 32px, 44px);
+  letter-spacing: -0.6%;
+  line-height: 150%;
+
+  @include mixins.below(550px) {
+    font-size: 27px;
+    line-height: 140%;
   }
 }
 
@@ -141,15 +201,6 @@ h4,
     // margin-bottom: 20px;
   }
 }
-
-// h5,
-// .h5 {
-//   @include type.fluid-type(430px, 1440px, 11px, 16px);
-//   // font-weight: 600;
-//   letter-spacing: -0.05rem;
-//   line-height: 1.2;
-//   //   margin-bottom: 40px;
-// }
 
 .navigation {
   @include fluid-type(430px, 1440px, 15px, 18px);
@@ -180,12 +231,24 @@ h4,
   }
 }
 
-.body_big {
+// Body Big Styles
+html[data-language="en"] .body_big {
   @include fluid-type(435px, 1440px, 19px, 22px);
   line-height: var(--font-spacing-line-medium);
   letter-spacing: -0.06rem;
 
   @include mixins.below(450px) {
     font-size: 17px;
+  }
+}
+
+html[data-language="my"] .body_big {
+  @include fluid-type(435px, 1440px, 17px, 20px);
+  line-height: 165%;
+  letter-spacing: -0.06rem;
+
+  @include mixins.below(450px) {
+    font-size: 16px;
+    line-height: 155%;
   }
 }

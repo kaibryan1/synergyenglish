@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 
 export default function LanguageSwitch() {
   const { t, i18n } = useTranslation();
-  const [active, setIsActive] = useState(navigator.language);
+  const [active, setIsActive] = useState("en");
 
   // Normalize language to match keys ("en" or "my")
   const getNormalizedLanguage = (lang) => {
@@ -24,63 +24,9 @@ export default function LanguageSwitch() {
   useEffect(() => {
     const currentLanguage = getNormalizedLanguage(navigator.language);
     if (i18n.language === "en") {
-      document.documentElement.style.setProperty("--font", "Pally");
-      document.documentElement.style.setProperty("--font-weight", "600");
-      document.documentElement.style.setProperty(
-        "--font-spacing-word-h1",
-        "auto"
-      );
-      document.documentElement.style.setProperty(
-        "--font-spacing-word-h2",
-        "auto"
-      );
-      document.documentElement.style.setProperty(
-        "--font-spacing-letter-medium",
-        "-2.2px",
-        "important"
-      );
-      document.documentElement.style.setProperty(
-        "--font-spacing-letter-small",
-        "0px",
-        "important"
-      );
-      document.documentElement.style.setProperty(
-        "--font-spacing-line-small",
-        "105%"
-      );
-      document.documentElement.style.setProperty(
-        "--font-spacing-line-medium",
-        "135%"
-      );
+      document.documentElement.setAttribute("data-language", "en");
     } else {
-      document.documentElement.style.setProperty("--font", "Padauk");
-      document.documentElement.style.setProperty("--font-weight", "bold");
-      document.documentElement.style.setProperty(
-        "--font-spacing-word-h1",
-        "-10px"
-      );
-      document.documentElement.style.setProperty(
-        "--font-spacing-word-h2",
-        "0px"
-      );
-      document.documentElement.style.setProperty(
-        "--font-spacing-letter-medium",
-        "-0.7rem",
-        "important"
-      );
-      document.documentElement.style.setProperty(
-        "--font-spacing-letter-small",
-        "0rem",
-        "important"
-      );
-      document.documentElement.style.setProperty(
-        "--font-spacing-line-small",
-        "148%"
-      );
-      document.documentElement.style.setProperty(
-        "--font-spacing-line-medium",
-        "158%"
-      );
+      document.documentElement.setAttribute("data-language", "my");
     }
   }, [i18n.language]);
 

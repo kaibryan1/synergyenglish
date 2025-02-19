@@ -1,0 +1,64 @@
+@use "../../../styles/index.scss" as index;
+
+.hero_text {
+  max-width: 50%;
+  margin-left: 80px;
+  overflow: visible !important;
+  overflow: visible;
+
+  & h1 {
+    white-space: prewrap;
+
+    & span {
+      position: relative;
+    }
+
+    & img {
+      position: absolute;
+      height: 48px;
+      overflow: visible;
+      @include index.below(550px) {
+        height: 32px;
+      }
+    }
+  }
+
+  & > p {
+    margin-bottom: 48px;
+    max-width: 80%;
+  }
+
+  @include index.below(1000px) {
+    max-width: 80%;
+    margin-inline: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & p {
+      width: 80%;
+    }
+  }
+
+  @include index.below(550px) {
+    max-width: 96%;
+  }
+}
+
+// Icons managements
+.sunIcon {
+  left: -40%;
+  bottom: -10%;
+}
+
+.starIcon {
+  right: -22px;
+  top: -10px;
+}
+
+.flowerIcon {
+  left: -10px;
+  bottom: -10px;
+}
